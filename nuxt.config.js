@@ -12,6 +12,7 @@ export default {
     ],
     link: [
       //{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel:'stylesheet', href:'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Varela+Round&display=swap'},      
       { rel: 'apple-touch-icon', sizes: '57x57', href: '/apple-icon-57x57.png' },
       { rel: 'apple-touch-icon', sizes: '60x60', href: '/apple-icon-60x60.png' },
       { rel: 'apple-touch-icon', sizes: '72x72', href: '/apple-icon-72x72.png' },
