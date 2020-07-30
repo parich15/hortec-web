@@ -146,8 +146,8 @@
     .cabecera-peque {
         min-width: auto;
         .imagenCabeceraPeque {
-            background-size: cover;
-            background-position-x: 25%;
+            background-size: cover !important;
+background-position-x: 18% !important;
         }
     }
     .contenido1{

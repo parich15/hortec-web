@@ -4,6 +4,23 @@
             justify-content: center;
             .columna-intro>.introFam{
                 flex-flow: column wrap;
+                h2{
+                    font-size: 3rem;
+                    font-family: 'Montserrat';
+                    font-weight: 600;
+                    color: #6d6d6d;
+                    text-align: center;
+                    .dest{
+                        color:#8cb201;
+                    }
+                }
+                p{
+                    font-family: 'Montserrat';
+                    text-align: center;
+                    margin-top: 0.5em;
+                    font-weight: 400;
+                    font-size: 1.1em;
+                }
             }
         }
     }

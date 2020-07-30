@@ -14,7 +14,7 @@
     <b-container class="Families-1" fluid>
       <b-row class="fila-1 d-flex">
         <b-col class="col-12 col-md-6 d-flex columna-intro mt-5">
-          <div class="introFam d-flex">
+          <div class="introFam d-flex slide-in-blurred-bottom">
             <h2>Productes <span class="dest">100% Ecològics</span></h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perspiciatis labore harum, officia tenetur excepturi temporibus velit pariatur doloribus quae natus minima. Ipsum qui vitae illo exercitationem sapiente. Nesciunt, quasi!</p>
           </div>
