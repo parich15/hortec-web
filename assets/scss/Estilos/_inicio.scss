@@ -1,0 +1,624 @@
+// Titulo y Subititulo
+.cabecera {
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+.container-cabecera {
+    .tituloInicio {
+        font-family: 'Montserrat';
+        font-weight: 600;
+        font-size: 6em;
+        background: transparent;
+        text-shadow: 0em 0.08em 0em rgba(0, 0, 0, 0.4);
+        color: $color-logo;
+        @include fontSmooth();
+    }
+    .subtInicio {
+        font-family: 'Varela Round';
+        @include fontSmooth();
+    }
+}
+
+// Primer Container 
+
+.MainPresentacion {
+    background: $background-pl;
+    
+    .row{
+        flex-direction: column;
+    }
+    .presentacion {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 20px;
+
+        h2 {
+            font-size: 2.7rem;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            color: $texto-pl;
+            text-align: center;
+
+            > span {
+                color:$texto-s;
+            }
+        }
+
+        p {
+            font-family: 'Varela Round';
+            font-size: 1.2em;
+            color: $texto-p;
+        }
+    }
+    .presentacion2 {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+
+        .txtPre {
+            margin-right: 20%;
+            margin-left: 20%;
+            text-align: center;
+            font-family: 'Montserrat';
+            font-size: 2em;
+            font-weight: 600;
+            color: $texto-p ;
+
+            strong {
+                color: $background-so;
+            }
+        }
+    }
+}
+
+//Contenedor Principal 
+
+.Principal {
+    box-shadow: 0 0 6px 8px rgba(0, 0, 0, 0.101562);
+    background: $background-p;
+    overflow: hidden;
+
+    .cooperativa {
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .txtCop {
+            margin-top: 30px;
+            padding-left: 50px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-flow: column wrap;
+
+            h3 {
+                font-family: 'Montserrat';
+                font-weight: 600;
+                color: $texto-s;
+                font-size: 2.5em;
+                @include fontSmooth();
+            }
+
+            p {
+                font-family: 'Varela Round';
+                font-size: 1.1em;
+                color: $texto-p;
+                @include fontSmooth();
+            }
+            .btn-outline-warning {
+                color:$texto-p;
+                border-color: $background-s;
+                font-family: 'Varela Round';
+                @include easeIn();
+                &:hover {
+                    background-color: $background-s;
+                    transform: scale(1.1);
+                    @include easeIn();
+                }
+            }
+        }
+        .imgCop {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('/img/cooperativa.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            .espacio {
+                height: 387px;
+            }
+            /*img {
+                margin-top:25px;
+                margin-bottom: 25px;
+                -webkit-box-shadow: 20px 14px 16px -6px rgba(0,0,0,0.75);
+                -moz-box-shadow: 20px 14px 16px -6px rgba(0,0,0,0.75);
+                box-shadow: 20px 14px 16px -6px rgba(0,0,0,0.75);
+            }*/
+        }
+    }
+
+
+    
+}
+//Familes
+
+.families {
+    .rowFamilies {
+        align-items:center;
+        .colImg {
+            justify-content: center;
+
+            img{
+                border-radius: 10%;
+                box-shadow: 20px 14px 16px -6px rgba(0,0,0,0.75);
+            }
+        }
+        .colTxt {
+            h3{
+                font-family: 'Montserrat';
+                font-weight: 600;
+                color: $texto-s;
+                font-size: 2.5em;
+                @include fontSmooth();
+            }
+            h6{
+                color:$texto-so;
+                font-family: 'Montserrat';
+            }
+            p{
+                font-family: 'Varela Round';
+                font-size: 1.1em;
+                color: $texto-p;
+                @include fontSmooth();
+            }
+            .btn-outline-warning {
+                color:$texto-p;
+                border-color: $background-s;
+                font-family: 'Varela Round';
+                @include easeIn();
+                &:hover {
+                    background-color: $background-s;
+                    transform: scale(1.1);
+                    @include easeIn();
+                }
+            }
+        }
+    }
+}
+
+//Tarjetas Escollir Hortec
+.tarjetasInicio {
+    background: #8cb201;
+    .tjtTit{
+        margin-bottom:40px;
+        h2{
+            text-align: center;
+            color: $background-pl;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            margin-top: -10vh;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            span {
+                color: $texto-s;
+            }
+        }
+    }
+
+    .filaTjts {
+        .contenedorTjt {
+            margin-bottom: 15vh;
+            flex-flow: column wrap;
+            align-items: center;
+            background: #ffffffe8;
+            border-radius: 25px;
+            transition: 100ms;
+            box-shadow: 0px 25px 27px -20px rgba(48,48,48,1);
+            &:hover {
+                transform: scale(1.05);
+                transition: 100ms ease-in-out;
+            }
+            .iconoTjt {
+                position: relative;
+
+                img {
+                    margin-top: -3vh;
+                }
+            }
+            .bodyTjt{
+                text-align: center;
+                h4 {
+                    font-family: 'Montserrat';
+                    color:$texto-p;
+                }
+                h6{
+                    color:$texto-s;
+                    font-family: 'Varela Round';
+                }
+                p {
+                    font-family: 'Montserrat';
+                    font-weight: 400;
+                    color: $texto-p;
+                }
+            }
+        }
+    }
+}
+
+.sepTjts {
+    .separadorBot {
+        background-color: white;
+    }
+}
+//Seccion Empresas
+.rowEmpresas {
+    margin-top:-60px;
+    margin-bottom:10vh;
+    align-items: center;
+    .contEmpresa {
+        flex-flow: column wrap;
+        .cabeceraEmpresa {
+            h4{
+                color:$texto-s;
+                font-family: 'Montserrat';
+                font-weight: 600;
+
+            }
+            h6{
+                color:$texto-p;
+                font-family: 'Varela Round';
+                font-size: 1.1em;
+            }
+        }
+        .bodyEmpresas {
+            p {
+                font-family: 'Montserrat';
+                color: $texto-p;
+
+            }
+            .btn-outline-warning {
+                color:$texto-p;
+                border-color: $background-s;
+                font-family: 'Varela Round';
+                @include easeIn();
+                &:hover {
+                    background-color: $background-s;
+                    transform: scale(1.1);
+                    @include easeIn();
+                }
+            }
+        }
+    }
+    .container-logo-empresa {
+        justify-content: space-evenly;
+        .logoEmpresa {
+            img{
+                opacity: .75;
+                -webkit-filter: grayscale(100%); 
+                filter: grayscale(100%);
+                transition: all .5s;
+                &:hover{
+                    -webkit-filter: none;
+                            filter: none;
+                }
+            }
+        }
+    }
+}
+//Sección Contacto
+.contacto {
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 6px 8px rgba(0, 0, 0, 0.101562);
+    .colMos{
+        margin-top: 40px;
+    .imagenMosaico {
+        justify-content: center;
+        .mosaico {
+            opacity: 0.75;
+        }
+    }
+}
+    .txtContacto{
+        h3{
+            font-family: 'Montserrat';
+            font-weight: 600;
+            color: $texto-s;
+            font-size: 2.5em;
+            @include fontSmooth();
+        }
+        p{
+            margin-right: 4em;
+            font-family: 'Varela Round';
+            color: $texto-p;
+        }
+        .botones-contacto {
+            .btn-outline-warning {
+                color:$texto-p;
+                border-color: $background-s;
+                font-family: 'Varela Round';
+                @include easeIn();
+                &:hover {
+                    background-color: $background-s;
+                    transform: scale(1.1);
+                    @include easeIn();
+                }
+            }
+        }
+    }
+}
+//ADV
+.adv{
+    margin-top: -50px;
+    .separador{
+        width:100%;
+        padding:0;
+        margin:0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position:relative;
+    }
+    .containerAdv {
+        background-color: $background-s;
+        height: 30vh;
+        justify-content: center;
+        .contenido{
+            flex-flow: column wrap;
+            width: 65%;
+            align-self: center;
+            h3 {
+            font-size: 4em;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            color: white;
+            text-align:center;
+            }
+            p {
+            color: white;
+            font-size: 1.2em;
+            font-family: 'Varela Round';
+            text-align: center;
+
+        }
+        .btn {
+            color:$texto-s;
+            border-color: $background-p;
+            background: $background-p;
+            font-family: 'Varela Round';
+            @include easeIn();
+            margin-bottom: 0.5em;
+            &:hover {
+                color: $texto-so;
+                transform: scale(1.1);
+                @include easeIn();
+             }
+            }
+        }
+    }
+    .separadorBottom {
+        background: #8cb201;
+    }
+}
+
+//Localizacion
+
+.Localizacion {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    .rowLocalizacion {
+        justify-content: space-around;
+        align-items: center;
+    .infoLoc {
+        .container-localizacion {
+            flex-flow: column;
+
+            h3 {
+                font-family: 'Montserrat';
+                font-weight: 600;
+                color: $texto-s;
+                font-size: 2.5em;
+            }
+            h6 {
+                font-family: 'Varela Round';
+                color: $texto-p;
+
+            }
+            p{
+                font-family: 'Montserrat';
+            }
+            .metro{
+                width: 35px;
+            }
+            .separadorLoc {
+                margin-top: 5px;
+                margin-bottom: 20px;
+                border: solid 2px orange;
+                width: 50%;
+                border-radius: 10px;
+            }
+            .telf-mail{
+                justify-content: space-around;
+                font-family: 'Montserrat';
+                font-weight: 600;
+                > div:hover {
+                    color:$texto-so;
+                    transition: ease-in 200ms;
+                }
+                a{
+                    color:$texto-pl;
+                    
+                    &:hover {
+                    text-decoration: none;
+                    color:$texto-s;
+                    transition: ease-in 200ms;
+                }
+                }
+            }  } 
+        }
+        .container-mapa {
+            overflow: hidden;
+            border-radius: 50px;
+            box-shadow: 4px 3px 5px #00000085;
+        }
+    }
+}
+
+
+//RESPONSIVE VERSION MOVIL
+
+//INICIO 
+@include mediaSm {
+    .container-cabecera{
+        .tituloInicio{
+            font-size: 4em;
+        }
+        .subtInicio {
+            font-size: 1.1em;
+        }
+    }
+    .presentacion{
+        text-align: center;
+    }
+
+    .MainPresentacion .presentacion2 .txtPre {
+        font-size: 1.5em!important;
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .Principal{
+
+     .cooperativa {
+        flex-flow: column wrap!important;
+        justify-content: center; 
+
+        .txtCop{
+            padding-left: 15px!important;
+            h3{
+                text-align: center;
+                margin-bottom: 0.8em;
+            }
+            p{
+                margin-right: 0!important;
+                text-align: center;
+            }
+            .btnCop {
+                justify-content: center;
+                margin-top: 0.5em;
+                }
+            }
+        }
+    }
+    .families {
+        .rowFamilies{
+            flex-direction: column-reverse!important;
+            flex-flow: column wrap;
+            .colTxt {
+                >div {
+                    margin-top:2.5em;
+                }
+                h3,h6 {
+                    text-align: center;
+                }
+
+                p{
+                    text-align: justify;
+                }
+                .btnFam {
+                    justify-content: center;
+                }
+            }
+            .colImg .contenedorImg {
+                img{
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        }
+    }
+    .adv {
+        flex-flow: column wrap!important;
+        overflow: hidden!important;
+        .containerAdv{
+             .contenido {
+            width: auto;
+            
+                h3{
+                    font-size: 2em;
+                }
+                p {
+                    margin-left: 15px;
+                    margin-right: 15px;
+                    font-size: 1.05em;
+                }
+             }
+        }
+    }
+    .tarjetasInicio{
+        overflow: hidden;
+        .tjtTit{
+            h2 {
+                margin-top:0px!important;
+                font-size: 1.8em;
+            }
+        }
+        .filaTjts{
+            flex-flow: column wrap;
+        }
+    }
+
+    .rowEmpresas {
+        margin-top: 0px;
+        .contEmpresa{
+            margin-bottom: 2em;
+        }
+    }
+    .contacto{
+        flex-direction: column-reverse!important;
+        .mosaico {
+            width: 320px;
+            height: auto;
+        }
+        .col-con-txt {
+            margin-top: 2em;
+        }
+        .txtContacto {
+            h3 {
+                text-align: center;
+                font-size: 2.3em;
+            }
+            p{
+                margin-right: 0;
+                text-align: center;
+            }
+            .botones-contacto{
+                justify-content: center;
+                margin-top: 20px;
+            }
+        }
+
+    }
+    .rowLocalizacion {
+        flex-flow: column wrap;
+        .infoLoc{
+            margin-bottom: 50px;
+            .container-localizacion {
+                h3, h6{
+                    text-align:center;
+                }
+                p{
+                    text-align: center;
+                }
+                .separadorLoc{
+                    margin: auto;
+                }
+            }
+        }
+        .container-mapa {
+            overflow: hidden;
+            align-self: center;
+
+        }
+    }
+}

@@ -1,0 +1,100 @@
+/*COLORES*/
+$background-p: #f5f5f5!default;
+$background-pl: #fff!default;
+$background-po: #c2c2c2!default;
+$background-s:#ffa726!default;
+$background-sl:#ffb74d!default;
+$background-so: #fb8c00!default;
+
+/*Texto*/
+$texto-p: #424242!default;
+$texto-pl:#6d6d6d!default;
+$texto-po: #1b1b1b!default;
+$texto-s: #ff9800!default;
+$texto-sl: #ffc947!default;
+$texto-so: #c66900!default;
+
+$color-logo: #e74914!default;
+
+/*FUENTES*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Varela+Round&display=swap');
+
+/*Mixins*/
+
+// Media Query Mixins - Responsive
+
+//Pequeño
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+//Medio
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+//Grande
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        @content;
+    }
+}
+//Muy Grande
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}
+
+@mixin easeIn {
+    transition: ease-in 200ms;
+}
+
+@mixin linear-gradient($color1, $color2){
+    background: $color1; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(90deg, $color1 , $color2); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(90deg, $color1, $color2); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(90deg, $color1, $color2); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(0deg, $color1 , $color2); /* Standard syntax */
+}
+
+@mixin fontSmooth {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+//Especiales 
+.clear-filter{
+    &:after,
+    &:before{
+        display: none;
+    }
+    &[filter-color="black"]{
+        @include linear-gradient (rgba(44, 44, 44, 0.2), rgba(23, 20, 19, 0.7));
+    }
+}
+
+//Transiciones
+
+.page-enter-active {
+    transition: opacity 0.25s ease-out;
+  }
+  
+  .page-leave-active {
+    transition: opacity 0.25s ease-in;
+  }
+  
+  .page-enter,
+  .page-leave-active {
+    opacity: 0;
+  }
+
+  //Configuraciones Adicionales
+
+  .carousel-indicators li {
+      outline: none!important;
+  }

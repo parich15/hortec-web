@@ -1,0 +1,10 @@
+.families{
+    .Families-1{
+        .fila-1{
+            justify-content: center;
+            .columna-intro>.introFam{
+                flex-flow: column wrap;
+            }
+        }
+    }
+}

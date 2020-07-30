@@ -1,0 +1,173 @@
+.titulo{
+    .logo {
+    width: 40%;
+    max-width: 200px;
+    height: 40px;
+    }
+    .NuxtLogo {
+        max-width: 30px;
+      margin-left: 10px;
+      max-height: 40px;
+    }
+}
+.MenuNav {
+    background-color:#f5f5f5cc ;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    transition: 0.5s ease-in;
+    &.solid {
+        background-color: $background-p ;
+        transition: 0.5s ease-in;
+    }
+
+    .titulo {
+        margin-left: 3rem;
+    }
+    .linksMenu  {
+        margin-right: 1rem;
+    }
+
+    .nav-link {
+        color: $texto-pl!important;
+        @include easeIn();
+        &:hover {
+            color: $texto-s!important;
+            transform: scale(1.1);
+            @include easeIn();
+        }
+        &.nuxt-link-active{
+            color: $texto-s!important;
+        }
+    }
+
+
+    .botonCta {
+        .botiga {
+            background-color: $texto-s;
+            font-family: 'Varela Round';
+            margin-right: 0.5em;
+            border: none;
+            overflow: hidden;
+            @include easeIn();
+        
+            &:hover{
+                background-color: $background-pl;
+                transform: scale(1.1);
+                color: $texto-s;
+                @include easeIn();
+            }
+        }
+    }
+}
+.popover {
+
+    .popover-header {
+        font-family: 'Montserrat';
+        text-align: center;
+        font-weight: 600;
+        font-size: 1.2em;
+    }
+
+    .popover-body {
+        font-family: 'Varela Round';
+        text-align: center;
+        font-size: 1em;
+
+        a {
+            font-family: 'Varela Round';
+            color: $texto-s;
+            text-decoration: none;
+            @include easeIn();
+
+            &:hover{
+                font-size: 1.15em;
+                @include easeIn();
+            }
+        }
+    }
+}
+.logoHortec{
+    width: 130px;
+    height: auto;
+}
+.bi-three-dots-vertical.b-icon.bi {
+	transition: 250ms ease;
+	color: $texto-s;
+}
+//MODAL 
+
+.modal-header {
+    h5{
+        font-family: 'Montserrat';
+        text-align: center;
+    }
+}
+.bodyModal {
+    flex-flow: column wrap;
+    .txtModal {
+        margin-top:20px;
+        h3{
+            text-align: center;
+            font-family: 'Montserrat';
+            font-weight: 600;
+            color: $texto-p;
+        }
+        p{
+            font-family: 'Varela Round';
+            text-align: center;
+        }
+    }
+}
+.modal-footer{
+    justify-content: space-evenly;
+    .btnBotiga {
+   font-family: 'Montserrat';
+   font-weight: 600;
+   color:$background-pl;
+   background-color: $background-s;
+    }
+    .btnCancelModal {
+        font-family: 'Montserrat';
+        font-weight: 600;
+    }
+}
+
+//Responsive
+@include mediaSm {
+    .MenuNav{
+        .titulo {
+            margin-left: 1rem!important;
+        }
+        .linksMenu {
+            margin-right: 0;
+        }
+        .nav-link {
+            text-align: center;
+            animation: 1s appear;
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+        @keyframes appear {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+        }
+
+        .botonCta .botiga {
+            margin-right: 0;
+        }
+    }
+    .logoHortec{
+        width: 95px;
+        height: 45px;
+
+    }
+
+    .bodyModal .txtModal p {
+        font-size: 0.9em;
+    }
+}

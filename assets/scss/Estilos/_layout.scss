@@ -1,0 +1,150 @@
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+  /*CABECERAS*/
+  .cabecera{
+    min-height: 100vh;
+    max-height: 999px;
+    padding: 0;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  
+    & > .content{
+      margin-top: 12%;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+  
+    &.cabecera-pequeña{
+        min-height: 60vh;
+        max-height: 440px;
+    }
+  
+    &:before{
+        background-color: rgba(0,0,0,.3);
+    }
+  
+    > .b-container-cabecera{
+      z-index: 2;
+      padding-top: 12vh;
+      padding-bottom: 40px;
+    }
+  
+      .imagen-cabecera{
+          position: absolute;
+          background-size: cover;
+          background-position: center center;
+          width: 100%;
+          height: 100%;
+          z-index: -1;
+      }
+  
+      .content-center{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 2;
+        -ms-transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #FFFFFF;
+        padding: 0 15px;
+        width: 100%;
+        max-width: 880px;
+  
+      }
+  
+      footer{
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+      }
+      .container{
+          height: 100%;
+          z-index: 1;
+          text-align: center;
+          position: relative;
+      }
+   
+      &:after,
+      &:before{
+          position: absolute;
+          z-index: 0;
+          width: 100%;
+          height: 100%;
+          display: block;
+          left: 0;
+          top: 0;
+          content: "";
+      }
+  }
+
+  .clear-filter{
+    &:after,
+    &:before{
+        display: none;
+    }
+    &[filter-color="black"]{
+        @include linear-gradient (rgba(44, 44, 44, 0.2), rgba(23, 20, 19, 0.7));
+    }
+}
+
+/*Barra de Navegación*/
+html::-webkit-scrollbar{
+  display: none;
+  width: 0!important;
+  
+}
+//Cabecera Pequeña
+.cabecera-peque {
+  min-height: 60vh;
+  min-width: 999px;
+  display: flex;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .imagenCabeceraPeque {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -50;
+    overflow: hidden;
+    //Imagenes Cabecera Paginas
+    &.cooperativaImg{
+      background: url(/img/hcoop.jpg);
+    }
+    &.familiesImg{
+      background: url(/img/hfam.jpg);
+    }
+  }
+  .contenido-cab {
+    width: 25wv;
+    justify-content: center;
+    .tit-cop {
+      text-align: center;
+      color: $background-pl;
+      font-family: 'Montserrat';
+      h1 {
+        font-weight: 600!important;
+        span{
+          color: $texto-s;
+        }
+      }
+    }
+  }
+}
