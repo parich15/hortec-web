@@ -67,6 +67,18 @@ export default {
   bootstrapVue: {
     icons: true
   },
+
+  pwa:{
+    meta: {
+      title: 'Hortec Cooperativa',
+      author: 'Oscar Paricio Garcia',
+    },
+    manifest: {
+      name: 'PWA Hortec Cooperativa',
+      short_name: 'PWA Hortec Sccl',
+      lang: 'es',
+    },
+  },
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
