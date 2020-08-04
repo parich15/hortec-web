@@ -74,8 +74,8 @@ export default {
       author: 'Oscar Paricio Garcia',
     },
     manifest: {
-      name: 'PWA Hortec Cooperativa',
-      short_name: 'PWA Hortec Sccl',
+      name: 'Hortec Cooperativa',
+      short_name: 'Hortec',
       lang: 'es',
     },
   },
