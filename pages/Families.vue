@@ -20,13 +20,23 @@
           </div>
         </b-col>
       </b-row>
+
+      <b-row class="fila-2 d-flex famProd">
+        <b-col class="col-12 col-md-10 d-flex famProd">
+          <info-fam />
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
 
 <script>
+import InfoFam from '~/components/Families/InfoFam.vue'
 export default {
-
+  name: 'Families',
+  components: {
+    InfoFam
+  }
 }
 </script>
 

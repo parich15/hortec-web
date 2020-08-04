@@ -2,6 +2,7 @@
     .Families-1{
         .fila-1{
             justify-content: center;
+            margin-bottom: 15vh;
             .columna-intro>.introFam{
                 flex-flow: column wrap;
                 h2{
@@ -20,6 +21,71 @@
                     margin-top: 0.5em;
                     font-weight: 400;
                     font-size: 1.1em;
+                }
+            }
+        }
+        .fila-2{
+            justify-content: center;
+            .famProd{
+                justify-content: center;
+                .wrapperProductos{
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    .selectorFamilia{
+                        flex-flow: column wrap;
+                        align-items: center; 
+                        width: 30%;
+                        margin-bottom: 70px;
+                        .imgFam{
+                            margin-bottom: 15px;
+                            transition: 0.5s ease-in;
+                        }
+                        .txtFam{
+                            text-align: center;
+                            h3{
+                                font-family: 'Montserrat';
+                                color:$texto-pl;
+                                font-weight: 600;
+                                transition: 0.2s ease-in;
+                            }
+                            p{
+                                font-family: 'Montserrat';
+                                color: $texto-p;
+                                font-size: 1.1em;
+                            }
+                        }
+                        &:hover{
+                            .imgFam{
+                                transform: scale(1.1);
+                                transition: 0.3s ease-in;
+                             
+                            }
+                            .txtFam{
+                                h3{
+                                    transition: 0.2s ease-in;
+                                text-decoration: underline;
+                                text-decoration-color: $background-s;
+                                text-decoration-thickness: 2.8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Responsive
+
+@include mediaSm {
+    .families{
+        .fila-2{
+            .famProd{
+                .wrapperProductos{
+                    flex-flow: column wrap!important;
+                    .selectorFamilia{
+                        width: 100%!important;
+                    }
                 }
             }
         }
