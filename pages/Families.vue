@@ -25,6 +25,32 @@
         <b-col class="col-12 col-md-10 d-flex famProd">
           <info-fam />
         </b-col>
+        <b-col class="col-12 ctaFam d-flex">
+          <div class="textoCta">
+            <h4 class="titCta">
+              Vols saber més de les nostres families?
+            </h4>
+          </div>
+          <div class="btnsCta d-flex">
+            <div data-aos="fade-right" data-aos-delay="700">
+              <b-button type="button" size="lg" pill class="btn-informacio">
+                Més Informació
+              </b-button>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="700">
+              <b-button
+                type="button"
+                size="lg"
+                pill
+                variant="outline-warning"
+                class="btn-botiga"
+                @click="botiga"
+              >
+                Botiga
+              </b-button>
+            </div>
+          </div>
+        </b-col>
       </b-row>
     </b-container>
   </div>
@@ -33,9 +59,29 @@
 <script>
 import InfoFam from '~/components/Families/InfoFam.vue'
 export default {
+  scrollToTop: true,
   name: 'Families',
   components: {
     InfoFam
+  },
+  mounted () {
+    const target = document.querySelector('.titCta')
+    function handleIntersection (entries) {
+      entries.map((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('text-focus-in')
+        } else {
+          entry.target.classList.remove('text-focus-in')
+        }
+      })
+    }
+    const observer = new IntersectionObserver(handleIntersection)
+    observer.observe(target)
+  },
+  methods: {
+    botiga () {
+      window.open('https://botiga.hortec.org/login', '_blank')
+    }
   }
 }
 </script>

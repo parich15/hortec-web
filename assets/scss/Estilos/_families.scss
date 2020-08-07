@@ -39,6 +39,7 @@
                         .imgFam{
                             margin-bottom: 15px;
                             transition: 0.5s ease-in;
+                            border-radius: 50%;
                         }
                         .txtFam{
                             text-align: center;
@@ -58,7 +59,7 @@
                             .imgFam{
                                 transform: scale(1.1);
                                 transition: 0.3s ease-in;
-                             
+                                box-shadow: 0px 0px 11px 2px #495057;
                             }
                             .txtFam{
                                 h3{
@@ -71,6 +72,67 @@
                         }
                     }
                 }
+            }
+
+            .ctaFam{
+                height: 25vh;
+                justify-content: space-around;
+                background-color: $background-p;
+                align-items: center;
+                .textoCta{
+                    width: 65%;
+                    text-align: center;
+                 h4{
+                    font-size: 2.5rem;
+                    font-family: 'montserrat';
+                    font-weight: 600;
+                    color: $background-s;
+                 }
+                }
+                .btnsCta {
+                    flex-flow: row wrap;
+                    justify-content: space-evenly;
+                    width: 35%;
+                    overflow: hidden;
+                    height: 100%;
+                    align-items: center;
+                    
+                    .btn-informacio{
+                        font-family: 'Montserrat';
+                        background: $background-sl;
+                        border-color: $background-sl;
+                        transition: 0.3s ease-in;
+                        font-size: 1.4em;
+                        font-weight: 600;
+                        outline: none;
+                        &:hover{
+                            transform: scale(1.05);
+                            background-color: $background-so;
+                        }
+                        &:focus{
+                            box-shadow: none!important;
+                        }
+                    }
+                    .btn-botiga{
+                        border-color: $background-sl;
+                        color: $background-sl;
+                        transition: 0.3s ease-in;
+                        font-size: 1.4em;
+                        font-weight: 600;
+                        font-family: 'Montserrat';
+                        transition: 0.3s ease-in;
+                        outline: none;
+                        &:hover{
+                            background-color: $background-sl;
+                            color: white;
+                            border-color: $background-sl;
+                        }
+                        &:focus{
+                            box-shadow: none!important;
+                        }
+                    }
+                }
+            
             }
         }
     }
@@ -88,6 +150,26 @@
                     }
                 }
             }
+            .ctaFam{
+                height: 45vh!important;
+                flex-flow: column wrap !important;
+                justify-content: space-evenly!important;
+                .textoCta{
+                    width: 100%!important;
+                    text-align: center;
+                    h4{
+                        font-size: 2rem!important;
+                    }
+                }
+                .btnsCta{
+                    width: 100%!important;
+                    flex-flow: column!important;
+                    align-items: center!important;
+                    height: 40%!important;
+                    justify-content: space-between!important;
+                
+                }
+           }
         }
     }
 }

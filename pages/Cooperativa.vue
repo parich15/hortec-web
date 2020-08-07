@@ -150,10 +150,11 @@
 </template>
 
 <script>
-import Carousel from '~/components/Carousel.vue'
+import Carousel from '~/components/Cooperativa/Carousel.vue'
 import Contador from '~/components/Contador.vue'
 
 export default {
+  scrollToTop: true,
   name: 'Cooperativa',
   components: {
     Carousel,

@@ -169,10 +169,11 @@
 
 <script>
 import Parallax from '../components/Parallax.vue'
-import ADV from '../components/ADV.vue'
-import Tarjetas from '../components/Tarjetas.vue'
-import Localizacion from '../components/Localizacion.vue'
+import ADV from '../components/Inici/ADV.vue'
+import Tarjetas from '../components/Inici/Tarjetas.vue'
+import Localizacion from '../components/Inici/Localizacion.vue'
 export default {
+  scrollToTop: true,
   components: {
     Parallax,
     ADV,
