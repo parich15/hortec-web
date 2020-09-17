@@ -4,6 +4,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
   
   *,
@@ -131,6 +132,9 @@ html::-webkit-scrollbar{
     &.familiesImg{
       background: url(/img/hfam.jpg);
     }
+    &.advImg{
+      background: url(/img/hadv.jpg);
+    }
   }
   .contenido-cab {
     width: 100%;
@@ -144,6 +148,60 @@ html::-webkit-scrollbar{
         span{
           color: $texto-s;
         }
+      }
+    }
+  }
+}
+
+//FOOTER
+
+#Footer{
+ height: 10vh;
+ background-color: $background-s;
+ .row-Footer{
+   align-items: center;
+   height: 100%;
+   .primerSector{
+     font-family: 'Montserrat';
+     font-size: 1.2em;
+     color:white;
+     justify-self: center;
+     >div>p{
+       margin-bottom: 0;
+     }
+   }
+   .logo{
+     justify-content: center;
+     .logoHortec>g>g>use{
+       fill: white;
+     }
+   }
+   .segundoSector{
+    font-family: 'Montserrat';
+    font-size: 1.2em;
+    color:white;
+    justify-content: flex-end;
+    >div>p{
+      margin-bottom: 0;
+    }
+   }
+ }
+}
+
+@include mediaSm{
+  #Footer{
+    height: 20vh;
+    .row-Footer{
+      .primerSector{
+        order: 2;
+        justify-content: center;
+      };
+      .logo{
+        order: 1;
+      };
+      .segundoSector{
+        order: 3;
+        justify-content: center;
       }
     }
   }

@@ -19,7 +19,7 @@
           <b-nav-item to="/Families">
             Families
           </b-nav-item>
-          <b-nav-item to="#">
+          <b-nav-item to="/Adv">
             ADV
           </b-nav-item>
           <b-nav-item to="#">

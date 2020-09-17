@@ -1,0 +1,62 @@
+.Adv{
+    .cabecera-peque .contenido-cab .tit-cop h1>span{
+        color: $texto-s;
+    }
+    .seccion1{
+        padding: 0;
+        background-color:#d4f894 ;
+        overflow: hidden;
+        .fila1{
+            .imagen1{
+                overflow: hidden;
+                padding: 0;
+            }
+            .texto1{
+                display: flex;
+                align-items: center;
+                .txtAdv1{
+                    h3{
+                        margin: 1em 0;
+                        font-family: 'Montserrat';
+                        font-size: calc(1vw + 1vh + 1vmin);
+                        color: $texto-p;
+                        font-weight: bold;
+                    }
+                    p{
+                        font-family: 'Montserrat';
+                        font-size:1.1em;
+                        color: $texto-p;
+                        margin-right: 20px;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+        .fila2{
+            .imagen1{
+                overflow: hidden;
+                padding: 0;
+            }
+            .texto1{
+                display: flex;
+                align-items: center;
+                .txtAdv1{
+                    h3{
+                        margin: 1em 0;
+                        font-family: 'Montserrat';
+                        font-size: calc(1vw + 1vh + 1vmin);
+                        color: $texto-p;
+                        font-weight: bold;
+                    }
+                    p{
+                        font-family: 'Montserrat';
+                        font-size:1.1em;
+                        color: $texto-p;
+                        margin-right: 20px;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+}

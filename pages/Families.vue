@@ -53,16 +53,45 @@
         </b-col>
       </b-row>
     </b-container>
+    <b-container fluid class="ampliacionFam">
+      <b-row class="align-items-center rowAmp">
+        <b-col class="col-12 col-md-7 txtAmp columna1">
+          <div class="container txtAmp" data-aos="zoom-in">
+            <h3>Lorem Ipusm</h3>
+            <hr>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius architecto quae animi!
+              Repudiandae delectus maiores expedita commodi. Deserunt quibusdam ea nihil voluptatibus tempore,
+              et dignissimos incidunt cupiditate assumenda veritatis exercitationem.
+            </p>
+          </div>
+        </b-col>
+        <b-col class="col-12 col-md-5 px-0 columna2">
+          <div class="imagenSkew d-flex">
+            <img src="https://via.placeholder.com/800x500" alt="">
+          </div>
+        </b-col>
+      </b-row>
+      <b-row class="itemsFam mt-5">
+        <b-col class="col-12 colItems">
+          <div class="container d-flex">
+            <iconos-fam />
+          </div>
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
 import InfoFam from '~/components/Families/InfoFam.vue'
+import IconosFam from '~/components/Families/IconosFam.vue'
 export default {
   scrollToTop: true,
   name: 'Families',
   components: {
-    InfoFam
+    InfoFam,
+    IconosFam
   },
   mounted () {
     const target = document.querySelector('.titCta')
