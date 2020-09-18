@@ -68,7 +68,7 @@
         </b-col>
         <b-col class="col-12 col-md-5 px-0 columna2">
           <div class="imagenSkew d-flex">
-            <img src="https://via.placeholder.com/800x500" alt="">
+            <img src="/img/fam/fotoMercado.jpg" alt="">
           </div>
         </b-col>
       </b-row>
