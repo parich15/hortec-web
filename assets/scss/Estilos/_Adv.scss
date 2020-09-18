@@ -4,7 +4,7 @@
     }
     .seccion1{
         padding: 0;
-        background-color:#d4f894 ;
+        background-color:$background-pl;
         overflow: hidden;
         .fila1{
             .imagen1{
@@ -26,6 +26,10 @@
                         font-size: calc(1vw + 1vh + 1vmin);
                         color: $texto-pl;
                         font-weight: bold;
+                    }
+                    hr{
+                        border: 2px solid $texto-s;
+                        width: 15%;
                     }
                     p{
                         font-family: 'Montserrat';
@@ -55,6 +59,7 @@
         }
         .fila2{
             flex-direction: row-reverse ;
+            margin-bottom: 2em;
             .imagen2{
                 display: flex;
                 justify-content: center;
@@ -75,6 +80,10 @@
                         color: $texto-pl;
                         font-weight: bold;
                     }
+                    hr{
+                        border: 2px solid $texto-s;
+                        width: 15%;
+                    }
                     p{
                         font-family: 'Montserrat';
                         font-size:1.1em;
@@ -87,15 +96,18 @@
         }
     }
     .seccionFaq{
-        background-color:#d4f894;
+        background-color:$background-p;
         .rowFaq{
+            box-shadow: 1px -1px 4px 1px #6d6d6dba;
             .titFaq{
                 text-align: center;
                 font-family: 'Montserrat';
                 color:$texto-pl;
+                margin-top: 2em;
                 >h3{
                     font-weight: bold;
                     font-size: 2.5em;
+                    margin-bottom: 1em;
                     > span{
                     color:$background-s;
                 }

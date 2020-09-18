@@ -20,6 +20,7 @@
         <b-col class="col-12 col-md-7 texto1">
           <div class="txtAdv1" data-aos="fade-up">
             <h3>L'ADV d'Hortec</h3>
+            <hr>
             <p>
               Les sigles ADV corresponen a <b>Agrupació de Defensa Vegetal</b>. Les Agrupacions de Defensa Vegetal (ADV) són associacions d’agricultors independents o prèviament integrats en algun sistema associatiu (cooperatives, SAT, etc) que es constitueixen amb l’objectiu de rebre assessorament en aspectes de la sanitat vegetal i tots aquells temes tècnics que intervenen en la producció agrícola (fertilització, control d’adventícies, etc).
 
@@ -50,6 +51,7 @@
         <b-col class="col-12 col-md-7 texto2">
           <div class="txtAdv2" data-aos="fade-up">
             <h3>Què cal sapiguer de l’Agricultura Ecològica?</h3>
+            <hr>
             <p>
               L’assessorament en Agricultura Ecològica esta encara molt poc desenvolupat a casa nostre: manquen experiències, coneixements, etc. Això es una limitant a l’hora de donar una bona resposta als problemes agronòmics que puguin plantejar els socis.
 
