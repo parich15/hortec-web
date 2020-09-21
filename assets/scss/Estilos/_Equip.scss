@@ -435,3 +435,67 @@
 }
     }
 }
+@include mediaSm{
+    .Equip{
+        .seccion1 .comerciales .txtComerciales .text{
+            margin: 1em 0;
+            p{
+                margin: 1em 0;
+            }
+        }
+        .seccion1 .comerciales .imgCo .imgComerciales::before{
+            opacity: 0;
+        }
+        .seccionComerciales > div:nth-child(1) > div:nth-child(1){
+            flex-direction: column!important;
+        }
+        .seccion2 .almacen .txtAlmacen .text{
+            margin: 1em 0;
+            p{
+                margin: 1em 0;
+            }
+        }
+        .seccion2 .almacen .imgCo .imgMagatzem::before {
+            opacity: 0;
+        }
+        .almacen1,.almacen2{
+            flex-direction: column;
+        }
+            .seccion2 .seccionMagatzem .container .almacen1 .trabajador, .seccion2 .seccionMagatzem .container .almacen2 .trabajador{
+            width: 100%;
+        }
+        .seccion3 .Transport .txtTransport .text {
+            margin: 1em 0;
+            p{
+                margin: 1em 0;
+            }
+        }
+        .seccion3 .Transport .imgCo .imgTrans::before {
+            opacity: 0;
+        }
+        .transportistas1{
+            flex-direction: column;
+        }
+        .transportistas2{
+            flex-direction: column-reverse;
+        }
+        .seccion3 .seccionTrans .container .transportistas1 .trabajador,  .seccion3 .seccionTrans .container .transportistas2 .trabajador {
+            width: 100%;
+        }
+        .seccion4 .Administracio .txtAdmin .text{
+            margin: 1em 0;
+            p{
+                margin: 1em 0;
+            }
+        }
+        .seccion4 .Administracio .imgCo .imgAdmin::before {
+            opacity: 0;
+        }
+        .adm1{
+            flex-direction: column;
+        }
+        .seccion4 .seccionAdmin .container .adm1 .trabajador, .seccion4 .seccionAdmin .container .adm2 .trabajador{
+            width: 100%;
+        }
+    }
+}

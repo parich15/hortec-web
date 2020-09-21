@@ -1,5 +1,5 @@
 <template>
-  <div class="trabajador d-flex flex-column align-items-center" data-aos="fade-up" :data-aos-delay="delay">
+  <div class="trabajador d-flex flex-column align-items-center my-3" data-aos="fade-up" :data-aos-delay="delay">
     <div class="imagenPerfil mb-3">
       <img :src="imagen" alt="">
     </div>
