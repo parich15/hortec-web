@@ -5,7 +5,7 @@
         {{ pregunta.titulo }} - <b-icon-arrow-bar-down />
       </b-button>
       <b-collapse :id="pregunta.id" :key="idx" class="mt-2">
-        <b-card>
+        <b-card class="bodyCard">
           <p class="cardFaq" v-html="pregunta.texto" />
         </b-card>
       </b-collapse>

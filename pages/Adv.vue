@@ -33,7 +33,7 @@
           </div>
         </b-col>
       </b-row>
-      <b-row class="Cta">
+      <b-row class="Cta my-3 my-sm-5 ">
         <b-col class="col-12 col-md-7 colCta">
           <div class="CtaAdv" data-aos="zoom-in">
             <h5>

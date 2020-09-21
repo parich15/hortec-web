@@ -1,0 +1,437 @@
+.Equip{
+    .seccion1{
+        background-color: white;
+        .titEq{
+            h3{
+                text-align: center;
+                font-family: 'Montserrat';
+                color: $texto-pl;
+                font-size: 3em;
+                font-weight: 600;
+                > span{
+                    color:$texto-s;
+                }
+            }
+        }
+        .txtEq{
+            display: flex;
+            align-items: center;
+            p{
+                font-family: 'Montserrat';
+                font-size: 1.1em;
+                line-height: 1.7;
+                color: $texto-p;
+                text-align: justify;
+                margin: 0 1em;
+            }
+        }
+        .imgEq{
+            .imgFilo{
+                width: 100%;
+                height: 50vh;
+                background: url(/img/Equip/HortecTeam.jpg) no-repeat;
+                background-size: cover;
+                background-position: center;
+                border-radius: 25px;
+            }
+        }
+        .comerciales{
+            box-shadow:0px 0px 4px 4px #d6d8db;
+            background: $background-p;
+            overflow: hidden;
+            .imgCo{
+                padding: 0;
+            .imgComerciales{
+                width: 100%;
+                height: 40vh;
+                background: url(/img/Equip/comerciales.jpg) no-repeat;
+                background-size:cover ;
+                background-position: top center;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    height: 101%;
+                    width: 10%;
+                    background:$background-p;
+                    transform: skew(-10deg) translateX(-35px);
+                }
+                }
+            }
+           
+            .txtComerciales{
+                .text{
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 2em;
+                    h3{
+                        font-family: 'Montserrat';
+                        font-weight: 600;
+                        color: $texto-pl;
+                        font-size: 2.5em;
+                        
+                        > span{
+                            color:$texto-s
+                        }
+                    }
+                    hr{
+                       
+                        border: 2px solid #b3afaf;
+                        border-radius: 10px;
+                        width: 33%;
+                    }
+                    p{
+                        font-family: 'Montserrat';
+                        margin-right: 4em;
+                        line-height: 1.8;
+                        text-align: justify ;
+                        font-size: 1.1em;
+                        color: $texto-p;
+                    }
+                }
+            }
+        }
+    }
+    .trabajadoresComerciales{
+        .seccionComerciales{
+            .container > .trabajador {
+                .imagenPerfil{
+                    transition: 250ms ease;
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+                .informacion{
+                    text-align: center;
+                  
+                    h4{
+                        font-family: 'Montserrat';
+                        font-weight: 600;
+                        color: $texto-p;
+                        transition: 250ms ease;
+                    }
+                    span{
+                        color:$texto-pl;
+                        font-family: 'Montserrat';
+                    }
+                }
+                &:hover{
+                    .imagenPerfil{
+                        transform: scale(1.05);
+                        transition: 250ms ease;
+                    }
+                    .informacion{
+                        transition: 250ms ease;
+                        h4{
+                            color:$texto-s
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .seccion2{
+        .almacen{
+            box-shadow:0px 0px 4px 4px #d6d8db;
+            background: $background-p;
+            overflow: hidden;
+            .imgCo{
+                padding: 0;
+            .imgMagatzem{
+                width: 100%;
+                height: 40vh;
+                background: url(/img/Equip/magatzem.jpg) no-repeat;
+                background-size:cover ;
+                background-position: center;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    height: 101%;
+                    width: 10%;
+                    background:$background-p;
+                    transform: skew(-10deg) translateX(-35px);
+                }
+                }
+            }
+           
+            .txtAlmacen{
+                .text{
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 2em;
+                    h3{
+                        font-family: 'Montserrat';
+                        font-weight: 600;
+                        color: $texto-pl;
+                        font-size: 2.5em;
+                        
+                        > span{
+                            color:$texto-s
+                        }
+                    }
+                    hr{
+                       
+                        border: 2px solid #b3afaf;
+                        border-radius: 10px;
+                        width: 33%;
+                    }
+                    p{
+                        font-family: 'Montserrat';
+                        margin-right: 4em;
+                        line-height: 1.8;
+                        text-align: justify ;
+                        font-size: 1.1em;
+                        color: $texto-p;
+                    }
+                }
+            }
+        }
+        .seccionMagatzem{
+            .container{
+                max-width: 1400px;
+                .almacen1,.almacen2{
+                 .trabajador {
+                width: 20%;
+                .imagenPerfil{
+                    transition: 250ms ease;
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+                .informacion{
+                    text-align: center;
+                  
+                    h4{
+                        font-family: 'Montserrat';
+                        font-weight: 600;
+                        color: $texto-p;
+                        transition: 250ms ease;
+                    }
+                    span{
+                        color:$texto-pl;
+                        font-family: 'Montserrat';
+                    }
+                }
+                &:hover{
+                    .imagenPerfil{
+                        transform: scale(1.05);
+                        transition: 250ms ease;
+                    }
+                    .informacion{
+                        transition: 250ms ease;
+                        h4{
+                            color:$texto-s
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    }
+    .seccion3{
+        .Transport{
+            box-shadow:0px 0px 4px 4px #d6d8db;
+            background: $background-p;
+            overflow: hidden;
+            .imgCo{
+                padding: 0;
+            .imgTrans{
+                width: 100%;
+                height: 40vh;
+                background: url(/img/Equip/transports.jpg) no-repeat;
+                background-size:cover ;
+                background-position: center;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    height: 101%;
+                    width: 10%;
+                    background:$background-p;
+                    transform: skew(-10deg) translateX(-35px);
+                }
+                }
+            }
+           
+            .txtTransport{
+                .text{
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 2em;
+                    h3{
+                        font-family: 'Montserrat';
+                        font-weight: 600;
+                        color: $texto-pl;
+                        font-size: 2.5em;
+                        
+                        > span{
+                            color:$texto-s
+                        }
+                    }
+                    hr{
+                       
+                        border: 2px solid #b3afaf;
+                        border-radius: 10px;
+                        width: 33%;
+                    }
+                    p{
+                        font-family: 'Montserrat';
+                        margin-right: 4em;
+                        line-height: 1.8;
+                        text-align: justify ;
+                        font-size: 1.1em;
+                        color: $texto-p;
+                    }
+                }
+            }
+        }
+        .seccionTrans{
+            .container{
+                max-width: 1400px;
+                .transportistas1,.transportistas2{
+                 .trabajador {
+                width: 20%;
+                .imagenPerfil{
+                    transition: 250ms ease;
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+                .informacion{
+                    text-align: center;
+                  
+                    h4{
+                        font-family: 'Montserrat';
+                        font-weight: 600;
+                        color: $texto-p;
+                        transition: 250ms ease;
+                    }
+                    span{
+                        color:$texto-pl;
+                        font-family: 'Montserrat';
+                    }
+                }
+                &:hover{
+                    .imagenPerfil{
+                        transform: scale(1.05);
+                        transition: 250ms ease;
+                    }
+                    .informacion{
+                        transition: 250ms ease;
+                        h4{
+                            color:$texto-s
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    }
+    .seccion4{
+        .Administracio{
+            box-shadow:0px 0px 4px 4px #d6d8db;
+            background: $background-p;
+            overflow: hidden;
+            .imgCo{
+                padding: 0;
+            .imgAdmin{
+                width: 100%;
+                height: 40vh;
+                background: url(/img/Equip/admin.jpg) no-repeat;
+                background-size:cover ;
+                background-position: center;
+                position: relative;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    height: 101%;
+                    width: 10%;
+                    background:$background-p;
+                    transform: skew(-10deg) translateX(-35px);
+                }
+                }
+            }
+           
+            .txtAdmin{
+                .text{
+                    width: 100%;
+                    height: 100%;
+                    margin: 0 2em;
+                    h3{
+                        font-family: 'Montserrat';
+                        font-weight: 600;
+                        color: $texto-pl;
+                        font-size: 2.5em;
+                        
+                        > span{
+                            color:$texto-s
+                        }
+                    }
+                    hr{
+                       
+                        border: 2px solid #b3afaf;
+                        border-radius: 10px;
+                        width: 33%;
+                    }
+                    p{
+                        font-family: 'Montserrat';
+                        margin-right: 4em;
+                        line-height: 1.8;
+                        text-align: justify ;
+                        font-size: 1.1em;
+                        color: $texto-p;
+                    }
+                }
+            }
+        }
+        .seccionAdmin{
+            .container{
+                max-width: 1400px;
+                .adm1,.adm2{
+                 .trabajador {
+                width: 20%;
+                .imagenPerfil{
+                    transition: 250ms ease;
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+                .informacion{
+                    text-align: center;
+                  
+                    h4{
+                        font-family: 'Montserrat';
+                        font-weight: 600;
+                        color: $texto-p;
+                        transition: 250ms ease;
+                    }
+                    span{
+                        color:$texto-pl;
+                        font-family: 'Montserrat';
+                    }
+                }
+                &:hover{
+                    .imagenPerfil{
+                        transform: scale(1.05);
+                        transition: 250ms ease;
+                    }
+                    .informacion{
+                        transition: 250ms ease;
+                        h4{
+                            color:$texto-s
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    }
+}

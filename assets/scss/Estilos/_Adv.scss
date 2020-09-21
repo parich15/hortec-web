@@ -49,8 +49,9 @@
                     text-align: center;
                     font-family: 'Montserrat';
                     
-                    color: $texto-pl;
+                    color: $texto-s;
                     h5{
+                        text-shadow: 0.08em 0.3em 0.1em rgba(0, 0, 0, 0.16);
                         font-weight: bold;
                         line-height: 1.5;
                     }
@@ -121,6 +122,9 @@
                         width: 80%;
                         .faqItem{
                             margin: 1.5em 0;
+                            .bodyCard{
+                                border-color: $texto-s;
+                            }
                             .btnFaq{
                                 text-align: left;
                                 padding: 1em 1em;
@@ -140,6 +144,7 @@
                             .cardFaq{
                                 font-family: 'Montserrat';
                                 letter-spacing: 1.02px;
+                               
                             }
                         }
                     }
@@ -150,6 +155,9 @@
 }
 @include mediaSm{
     .Adv{
+        .cabecera-peque .imagenCabeceraPeque.advImg{
+            background-position: center center!important;
+        }
         .seccion1{
             .fila1{
                 .imagen1{

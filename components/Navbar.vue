@@ -22,7 +22,7 @@
           <b-nav-item to="/Adv">
             ADV
           </b-nav-item>
-          <b-nav-item to="#">
+          <b-nav-item to="/Equip">
             Equip
           </b-nav-item>
           <b-nav-item to="#">
