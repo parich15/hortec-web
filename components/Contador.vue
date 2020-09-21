@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import anime from 'animejs/lib/anime.es.js'
+// import anime from 'animejs/lib/anime.es.js'
 
 export default {
   name: 'Contador',
@@ -52,7 +52,7 @@ export default {
   methods: {
     setContador (val) {
       const obj = { n: this.contador }
-      anime({
+      this.$anime({
         targets: obj,
         n: val,
         round: 1,

@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex componente">
-    <div v-for="item in items" :key="item" class="item" data-aos="fade-in">
+    <div v-for="(item,idx) in items" :key="idx" class="item" data-aos="fade-in">
       <div class="icono">
         <img :src="item.icono" alt="">
       </div>
