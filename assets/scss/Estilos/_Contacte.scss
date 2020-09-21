@@ -1,0 +1,72 @@
+.Contacto{
+   .TarjetaIcono{
+       .BodyTjt{
+        transition: 250ms ease-in;
+        width: 50%;
+        //justify-content: space-evenly;
+        background: white;
+        box-shadow: 0px 0 4px 1px #00000078;
+        margin: 1.2em auto;
+        border-radius: 25px;
+        .icono{
+            align-self: center;
+        >svg{
+            width: 50px;
+            height: 35px;
+            fill: $texto-pl;
+            transition: 250ms ease-in
+        }
+       }
+       .info{
+           justify-self: center;
+           h4{
+               font-family: 'Montserrat';
+               font-size: 1.2em;
+               color: $texto-p;
+           }
+           p{
+            font-family: 'Montserrat';
+            color: $texto-pl;
+            transition: 250ms ease-in
+           }
+        }
+        &:hover{
+            transform: scale(1.15);
+            transition: 250ms ease-in;
+            .icono>svg{
+                transform: scale(1.1);
+                transition: 250ms ease-in;
+                fill:$texto-s;
+            }
+            .info{
+                
+                p{
+                    color:$texto-s;
+                    transition: 250ms ease-in;
+                }
+            }
+        }
+       }
+   }
+   .txtCont{
+       h3{
+           font-family: 'Montserrat';
+           font-weight: 600;
+           font-size: 2.5em;
+           color: $texto-p;
+           >span{
+               color:$texto-s;
+           }
+       }
+       p{
+           font-family: 'Montserrat';
+           font-size: 1.25em;
+           line-height: 1.6;
+           color:$texto-p;
+       }
+   }
+   .seccion2{
+       background-color: $background-p;
+       box-shadow: 0px 0px 3px 2px #00000070;
+   }
+}

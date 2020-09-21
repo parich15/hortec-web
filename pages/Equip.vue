@@ -267,7 +267,7 @@
                 :delay="200"
               />
               <trabajador
-                nombre="Sheila Ouyeah"
+                nombre="Sheila Pérez"
                 rol="Dpt Incidències"
                 :imagen="'https://via.placeholder.com/150x150'"
               />

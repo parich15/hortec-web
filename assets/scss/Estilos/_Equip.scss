@@ -437,6 +437,9 @@
 }
 @include mediaSm{
     .Equip{
+        .cabecera-peque .imagenCabeceraPeque.equipImg{
+            background-position: center center!important;
+        }
         .seccion1 .comerciales .txtComerciales .text{
             margin: 1em 0;
             p{

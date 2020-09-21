@@ -28,7 +28,7 @@
           <b-nav-item to="#">
             Blog
           </b-nav-item>
-          <b-nav-item to="#">
+          <b-nav-item to="/Contacte">
             Contacte
           </b-nav-item>
         </b-navbar-nav>
