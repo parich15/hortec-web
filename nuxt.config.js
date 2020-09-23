@@ -51,6 +51,10 @@ export default {
   {
     src:'~/plugins/anime.js',
     mode:'client'
+  },
+  {
+    src:'~/plugins/validation.js',
+    ssr: false
   }
 ],
   /*
@@ -98,6 +102,8 @@ export default {
     /*
     ** You can extend webpack config here
     */
+   transpile: ["vee-validate/dist/rules"],
+
     extend (config, ctx) {
       config.module.rules.push({
         enforce: 'pre',

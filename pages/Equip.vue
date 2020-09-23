@@ -105,7 +105,7 @@
                 :delay="200"
               />
               <trabajador
-                nombre="Richard Queloqué"
+                nombre="Richard Cordoba"
                 rol="Coordinador"
                 :imagen="'https://via.placeholder.com/150x150'"
                 :delay="400"
@@ -119,7 +119,7 @@
             </div>
             <div class="almacen2 d-flex justify-content-between">
               <trabajador
-                nombre="Sergio Lopez"
+                nombre="Alejandro Moreno"
                 rol="Mosso de Magatzem"
                 :imagen="'https://via.placeholder.com/150x150'"
                 :delay="600"
