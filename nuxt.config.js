@@ -55,7 +55,7 @@ export default {
   {
     src:'~/plugins/validation.js',
     ssr: false
-  }
+  },
 ],
   /*
   ** Nuxt.js dev-modules

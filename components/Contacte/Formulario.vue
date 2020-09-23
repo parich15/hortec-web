@@ -137,33 +137,13 @@ export default {
       errors: []
     }
   },
-  // mounted () {
-  //   const axios = require('axios')
-  //   axios({
-  //     method: 'GET',
-  //     url: 'https://wft-geo-db.p.rapidapi.com/v1/geo/countries/Q29/regions',
-  //     headers: {
-  //       'content-type': 'application/octet-stream',
-  //       'x-rapidapi-host': 'wft-geo-db.p.rapidapi.com',
-  //       'x-rapidapi-key': '8f4726da60mshd8f49a12fcd415dp17ffdbjsna3fea89eebcf',
-  //       useQueryString: true
-  //     }
-  //   })
-  //     .then((response) => {
-  //       console.log(response.data.data)
-  //       this.regiones.push(response.data.data)
-  //       console.log(this.regiones)
-  //     })
-  //     .catch((error) => {
-  //       console.log(error)
-  //     })
-  // },
 
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
       alert(JSON.stringify(this.formulario))
     },
+
     onReset (evt) {
       evt.preventDefault()
       // Reset our formulario values
@@ -179,5 +159,6 @@ export default {
       })
     }
   }
+
 }
 </script>
