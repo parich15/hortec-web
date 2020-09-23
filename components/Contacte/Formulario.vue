@@ -107,8 +107,8 @@
         <b-button type="submit" variant="primary" :class="{'disabled':pristine || invalid || !passed }" :disabled="pristine|| invalid || !passed">
           Enviar
         </b-button>
-        <b-button type="reset" variant="danger">
-          Neteja
+        <b-button type="reset" variant="outline-danger">
+          Esborra
         </b-button>
       </b-form>
     </ValidationObserver>
@@ -125,8 +125,8 @@ export default {
   data () {
     return {
       formulario: {
-        email: '',
         nom: '',
+        email: '',
         tlf: '',
         cp: '',
         seleccion: []
