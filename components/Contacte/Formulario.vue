@@ -136,10 +136,10 @@ export default {
   data () {
     return {
       formulario: {
-        nom: '',
-        email: '',
-        tlf: '',
-        cp: '',
+        nom: null,
+        email: null,
+        tlf: null,
+        cp: null,
         seleccion: []
       },
       // regionSeleccionada: '',
