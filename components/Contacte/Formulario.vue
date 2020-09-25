@@ -149,10 +149,6 @@ export default {
   },
 
   methods: {
-    onSubmit (evt) {
-      evt.preventDefault()
-      // alert(JSON.stringify(this.formulario))
-    },
     onReset (evt) {
       evt.preventDefault()
       // Reset our formulario values
@@ -167,32 +163,27 @@ export default {
         this.show = true
       })
     },
+    encode (data) {
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
+    },
     handleSubmit () {
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
-      const nombre = this.formulario.nom
-      const email = this.formulario.email
-      const tlf = this.formulario.tlf
-      const cp = this.formulario.cp
-      const pregunta = this.formulario.seleccion
-      axios.post('/Contacte', {
-        nombre,
-        email,
-        tlf,
-        cp,
-        pregunta
-      },
-      axiosConfig)
+      axios.post(
+        '/Contacte',
+        this.encode({
+          'form-name': 'contacto',
+          ...this.form
+        }),
+        axiosConfig
+      )
     }
-    // encode (data) {
-    //   return Object.keys(data)
-    //     .map(
-    //       key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-    //     )
-    //     .join('&')
-    // }
   }
-
 }
+
 </script>
