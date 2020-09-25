@@ -179,6 +179,7 @@ export default {
         }),
         axiosConfig
       )
+      // eslint-disable-next-line no-console
       console.log(this.formulario)
     },
     encode (data) {
