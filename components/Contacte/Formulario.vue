@@ -165,24 +165,25 @@ export default {
       })
     },
     encode (data) {
-      return Object.keys(data)
-        .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join('&')
+      const formData = new FormData()
+      for (const key of Object.keys(data)) {
+        formData.append(key, data[key])
+      }
+      return formData
     },
-    handleSubmit () {
+    handleSubmit (e) {
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
       axios.post(
         '/Contacte',
         this.encode({
-          'form-name': 'contacto',
+          'form-name': e.target.getAttribute('name'),
           ...this.formulario
         }),
         axiosConfig
       )
+        .then(alert('todo bien'))
     }
   }
 }
