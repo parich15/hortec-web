@@ -5,7 +5,7 @@
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
-    @submit.prevent="handleSubmit"
+    @submit.prevent="handleSubmit()"
     @reset="onReset"
   >
     <ValidationObserver v-slot="{ pristine, invalid, passed }">
@@ -167,26 +167,26 @@ export default {
         this.show = true
       })
     },
-    encode(data){
+    encode (data) {
       return Object.keys(data)
         .map(
           key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
         )
-        .join("&");
-    },
-    },
-    handleSubmit () {
-      const axiosConfig = {
-        header: { 'Content-Type': 'application/x-www-form-urlencoded' }
-      }
-      axios.post(
-        '/Contacte',
-        this.encode({
-          'form-name': 'contacto',
-          ...this.formulario
-        }),
-        axiosConfig
-      )
+        .join('&')
     }
+  },
+  handleSubmit () {
+    const axiosConfig = {
+      header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    }
+    axios.post(
+      '/Contacte',
+      this.encode({
+        'form-name': 'contacto',
+        ...this.formulario
+      }),
+      axiosConfig
+    )
   }
+}
 </script>
