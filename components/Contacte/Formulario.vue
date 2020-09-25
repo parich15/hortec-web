@@ -1,15 +1,15 @@
 <template>
   <div>
-    <ValidationObserver v-slot="{ pristine, invalid, passed }">
-      <b-form
-        class="formulario"
-        name="contacto"
-        method="post"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        @submit.prevent="onSubmit"
-        @reset="onReset"
-      >
+    <b-form
+      class="formulario"
+      name="contacto"
+      method="post"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+      @submit.prevent="onSubmit"
+      @reset="onReset"
+    >
+      <ValidationObserver v-slot="{ pristine, invalid, passed }">
         <input type="hidden" name="form-name" value="contacto">
         <ValidationProvider
           v-slot="{ errors }"
@@ -124,8 +124,8 @@
         <b-button type="reset" variant="outline-danger">
           Esborra
         </b-button>
-      </b-form>
-    </ValidationObserver>
+      </ValidationObserver>
+    </b-form>
 
     <b-card class="mt-3" header="Form Data Result">
       <pre class="m-0">{{ formulario }}</pre>
