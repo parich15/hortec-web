@@ -1,7 +1,7 @@
 <template>
   <b-form
     class="formulario"
-    name="contacto"
+    name="Contacto"
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
@@ -45,7 +45,7 @@
             id="email"
             v-model="formulario.email"
             type="email"
-            name="email"
+            name="Email"
             required
             placeholder="Digan's el teu email"
           />
@@ -65,7 +65,7 @@
           <b-form-input
             id="telf"
             v-model="formulario.tlf"
-            name="telefono"
+            name="Telefono"
             required
             placeholder="Per últim, el teu telèfon"
             type="number"
@@ -98,11 +98,11 @@
 
       <ValidationProvider v-slot="{errors}" rules="required" name="preguntes">
         <b-form-group id="preguntes">
-          <b-form-radio-group id="radiobuttons" v-model="formulario.seleccion" name="preguntes">
-            <b-form-radio value="Informació" name="Info">
+          <b-form-radio-group id="radiobuttons" v-model="formulario.seleccion" name="Preguntas">
+            <b-form-radio value="Informació">
               Vull més Informació
             </b-form-radio>
-            <b-form-radio value="Sol·liciutd d'alta" name="Client">
+            <b-form-radio value="Sol·liciutd d'alta">
               Vull fer me client
             </b-form-radio>
           </b-form-radio-group>
