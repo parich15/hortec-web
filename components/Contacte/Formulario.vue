@@ -175,7 +175,8 @@ export default {
         )
         .join('&')
     },
-    handleSubmit () {
+    handleSubmit (evt) {
+      evt.preventDefault()
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
