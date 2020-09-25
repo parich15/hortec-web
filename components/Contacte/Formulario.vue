@@ -5,7 +5,7 @@
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
-    @submit.prevent="handleSubmit()"
+    @submit.prevent="handleSubmit"
     @reset="onReset"
   >
     <ValidationObserver v-slot="{ pristine, invalid, passed }">
