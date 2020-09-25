@@ -168,24 +168,19 @@ export default {
         this.show = true
       })
     },
-    encode (data) {
-      return Object.keys(data)
-        .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join('&')
-    },
-    handleSubmit (evt) {
-      evt.preventDefault()
+    handleSubmit () {
+      const formData = new FormData()
+      formData.append('Nombre', this.formulario.nom)
+      formData.append('Email', this.formulario.email)
+      formData.append('Telefon', this.formulario.tlf)
+      formData.append('CP', this.formulario.cp)
+      formData.append('Seleccion', this.formulario.seleccion)
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
       axios.post(
-        '/Contacte',
-        this.encode({
-          'form-name': 'contacto',
-          ...this.formulario
-        }),
+        '/',
+        formData,
         axiosConfig
       )
     }
