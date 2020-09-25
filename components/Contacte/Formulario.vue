@@ -10,7 +10,7 @@
     @reset="onReset"
   >
     <ValidationObserver v-slot="{ pristine, invalid, passed }">
-      <input type="hidden" name="form-name" value="contacto">
+      <input type="hidden" name="form-name" value="Contacto">
       <ValidationProvider
         v-slot="{ errors }"
         name="Nombre"
