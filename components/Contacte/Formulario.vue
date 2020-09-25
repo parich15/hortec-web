@@ -5,6 +5,7 @@
     method="post"
     data-netlify="true"
     data-netlify-honeypot="bot-field"
+    enctype="application/x-www-form-urlencoded"
     @submit.prevent="handleSubmit"
     @reset="onReset"
   >
@@ -98,10 +99,10 @@
       <ValidationProvider v-slot="{errors}" rules="required">
         <b-form-group id="preguntes">
           <b-form-radio-group id="radiobuttons" v-model="formulario.seleccion" name="preguntes">
-            <b-form-radio value="Informació" name="info">
+            <b-form-radio value="Informació" name="preguntes">
               Vull més Informació
             </b-form-radio>
-            <b-form-radio value="Sol·liciutd d'alta" name="client">
+            <b-form-radio value="Sol·liciutd d'alta" name="preguntes">
               Vull fer me client
             </b-form-radio>
           </b-form-radio-group>
