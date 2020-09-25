@@ -9,10 +9,10 @@
         @submit.prevent="onSubmit"
         @reset="onReset"
       >
-        <input type="hidden" name="form-name" value="contact">
+        <input type="hidden" name="form-name" value="contacto">
         <ValidationProvider
           v-slot="{ errors }"
-          name="Username"
+          name="Nombre"
           rules="required|txtmin:2|txtmax:20"
         >
           <b-form-group
@@ -34,7 +34,7 @@
           </b-form-group>
         </ValidationProvider>
 
-        <ValidationProvider v-slot="{errors}" rules="required|txtmax:30">
+        <ValidationProvider v-slot="{errors}" rules="required|txtmax:30" name="email">
           <b-form-group
             id="email-contacto"
             label="Quin es el teu correu?:"
@@ -54,7 +54,7 @@
           </b-form-group>
         </ValidationProvider>
 
-        <ValidationProvider v-slot="{ errors }" rules="minmax:9,9|required">
+        <ValidationProvider v-slot="{ errors }" rules="minmax:9,9|required" name="telefono">
           <b-form-group
             id="telefon-contacte"
             label="El teu numero de telèfon:"
@@ -75,7 +75,7 @@
           </b-form-group>
         </ValidationProvider>
 
-        <ValidationProvider v-slot="{ errors }" rules="cp:5,5|required">
+        <ValidationProvider v-slot="{ errors }" rules="cp:5,5|required" name="CP">
           <b-form-group
             id="codi-postal"
             label="Codi Postal"
@@ -87,6 +87,7 @@
               required
               placeholder="D'on ets?"
               type="number"
+              name="CP"
             />
             <span class="input-invalid-message">
               {{ errors[0] }}
