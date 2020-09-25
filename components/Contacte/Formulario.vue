@@ -171,21 +171,26 @@ export default {
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
-      axios.post('/Contacte',
-        this.encode({
-          'form-name': 'contacto',
-          ...this.formulario
-        }),
-        axiosConfig
-      )
-    },
-    encode (data) {
-      return Object.keys(data)
-        .map(
-          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join('&')
+      const nombre = this.formulario.nom
+      const email = this.formulario.email
+      const tlf = this.formulario.tlf
+      const cp = this.formulario.cp
+      const pregunta = this.formulario.seleccion
+      axios.post('/Contacte', {
+        nombre,
+        email,
+        tlf,
+        cp,
+        pregunta
+      })
     }
+    // encode (data) {
+    //   return Object.keys(data)
+    //     .map(
+    //       key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+    //     )
+    //     .join('&')
+    // }
   }
 
 }
