@@ -97,7 +97,7 @@
 
       <ValidationProvider v-slot="{errors}" rules="required">
         <b-form-group id="preguntes">
-          <b-form-radio-group id="radiobuttons" v-model="formulario.seleccion">
+          <b-form-radio-group id="radiobuttons" v-model="formulario.seleccion" name="preguntes">
             <b-form-radio value="Informació" name="info">
               Vull més Informació
             </b-form-radio>
