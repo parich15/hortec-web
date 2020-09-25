@@ -178,7 +178,7 @@ export default {
         '/Contacte',
         this.encode({
           'form-name': 'contacto',
-          ...this.form
+          ...this.formulario
         }),
         axiosConfig
       )
