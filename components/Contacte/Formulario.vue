@@ -182,7 +182,8 @@ export default {
         tlf,
         cp,
         pregunta
-      })
+      },
+      axiosConfig)
     }
     // encode (data) {
     //   return Object.keys(data)
