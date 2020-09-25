@@ -96,13 +96,13 @@
         </b-form-group>
       </ValidationProvider>
 
-      <ValidationProvider v-slot="{errors}" rules="required">
+      <ValidationProvider v-slot="{errors}" rules="required" name="preguntes">
         <b-form-group id="preguntes">
           <b-form-radio-group id="radiobuttons" v-model="formulario.seleccion" name="preguntes">
-            <b-form-radio value="Informació" name="preguntes">
+            <b-form-radio value="Informació" name="Info">
               Vull més Informació
             </b-form-radio>
-            <b-form-radio value="Sol·liciutd d'alta" name="preguntes">
+            <b-form-radio value="Sol·liciutd d'alta" name="Client">
               Vull fer me client
             </b-form-radio>
           </b-form-radio-group>
