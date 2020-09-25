@@ -2,6 +2,7 @@
   <div>
     <ValidationObserver v-slot="{ pristine, invalid, passed }">
       <b-form
+        class="formulario"
         name="contacto"
         method="post"
         data-netlify="true"
@@ -98,10 +99,10 @@
         <ValidationProvider v-slot="{errors}" rules="required">
           <b-form-group id="preguntes">
             <b-form-radio-group id="radiobuttons" v-model="formulario.seleccion">
-              <b-form-radio value="Informació">
+              <b-form-radio value="Informació" name="info">
                 Vull més Informació
               </b-form-radio>
-              <b-form-radio value="Sol·liciutd d'alta">
+              <b-form-radio value="Sol·liciutd d'alta" name="client">
                 Vull fer me client
               </b-form-radio>
             </b-form-radio-group>
