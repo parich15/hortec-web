@@ -1,7 +1,14 @@
 <template>
   <div>
     <ValidationObserver v-slot="{ pristine, invalid, passed }">
-      <b-form v-if="show" method="post" data-netlify="true" @submit.prevent="onSubmit" @reset="onReset">
+      <b-form
+        v-if="show"
+        name="contacto"
+        method="POST"
+        data-netlify="true"
+        @submit.prevent="onSubmit"
+        @reset="onReset"
+      >
         <input type="hidden" name="form-name" value="contact">
         <ValidationProvider
           v-slot="{ errors }"
