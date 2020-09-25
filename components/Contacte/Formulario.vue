@@ -171,16 +171,13 @@ export default {
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
-      axios.post(
-        '/Contacte',
+      axios.post('/Contacte',
         this.encode({
           'form-name': 'contacto',
           ...this.formulario
         }),
         axiosConfig
       )
-      // eslint-disable-next-line no-console
-      console.log(this.formulario)
     },
     encode (data) {
       return Object.keys(data)
