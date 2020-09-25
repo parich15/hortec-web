@@ -2,10 +2,10 @@
   <div>
     <ValidationObserver v-slot="{ pristine, invalid, passed }">
       <b-form
-        v-if="show"
         name="contacto"
-        method="POST"
+        method="post"
         data-netlify="true"
+        data-netlify-honeypot="bot-field"
         @submit.prevent="onSubmit"
         @reset="onReset"
       >
