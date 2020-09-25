@@ -23,6 +23,8 @@
             <b-form-input
               id="nombre"
               v-model="formulario.nom"
+              type="text"
+              name="Nombre"
               required
               placeholder="Digan's el teu nom"
             />
@@ -42,6 +44,7 @@
               id="email"
               v-model="formulario.email"
               type="email"
+              name="email"
               required
               placeholder="Digan's el teu email"
             />
@@ -61,6 +64,7 @@
             <b-form-input
               id="telf"
               v-model="formulario.tlf"
+              name="telefono"
               required
               placeholder="Per últim, el teu telèfon"
               type="number"
