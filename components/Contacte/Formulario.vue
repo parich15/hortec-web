@@ -153,7 +153,6 @@ export default {
       evt.preventDefault()
       // alert(JSON.stringify(this.formulario))
     },
-
     onReset (evt) {
       evt.preventDefault()
       // Reset our formulario values
@@ -168,23 +167,27 @@ export default {
         this.show = true
       })
     },
-    handleSubmit () {
-      const formData = new FormData()
-      formData.append('Nombre', this.formulario.nom)
-      formData.append('Email', this.formulario.email)
-      formData.append('Telefon', this.formulario.tlf)
-      formData.append('CP', this.formulario.cp)
-      formData.append('Seleccion', this.formulario.seleccion)
+    encode(data){
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join("&");
+    },
+    },
+    handleSubmit (evt) {
+      evt.preventDefault()
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
       axios.post(
         '/',
-        formData,
+        this.encode({
+          'form-name': 'contacto',
+          ...this.formulario
+        }),
         axiosConfig
       )
     }
   }
-
-}
 </script>
