@@ -26,6 +26,7 @@
             v-model="formulario.Nombre"
             type="text"
             name="Nombre"
+            :state="estado"
             required
             placeholder="Digan's el teu nom"
           />
@@ -48,6 +49,7 @@
             name="Email"
             required
             placeholder="Digan's el teu email"
+            :state="estado"
           />
           <span class="input-invalid-message">
             {{ errors[0] }}
@@ -69,6 +71,7 @@
             required
             placeholder="Per últim, el teu telèfon"
             type="number"
+            :state="estado"
           />
           <span class="input-invalid-message">
             {{ errors[0] }}
@@ -89,6 +92,7 @@
             placeholder="D'on ets?"
             type="number"
             name="CP"
+            :state="estado"
           />
           <span class="input-invalid-message">
             {{ errors[0] }}
@@ -98,7 +102,7 @@
 
       <ValidationProvider v-slot="{errors}" rules="required" name="preguntes">
         <b-form-group id="preguntes">
-          <b-form-radio-group id="radiobuttons" v-model="formulario.Preguntas" name="Preguntas">
+          <b-form-radio-group id="radiobuttons" v-model="formulario.Preguntas" :state="estado" name="Preguntas">
             <b-form-radio value="Informació">
               Vull més Informació
             </b-form-radio>
@@ -111,13 +115,6 @@
           </span>
         </b-form-group>
       </ValidationProvider>
-      <!-- <div>
-          <select id="ciudades" v-model="regionSeleccionada" name="Ciudad">
-            <option v-for="region in regiones[0]" :key="region.isoCode" :value="region.name">
-              {{ region.name }}
-            </option>
-          </select>
-        </div> -->
       <b-button type="submit" variant="primary" :class="{'disabled':pristine || invalid || !passed }" :disabled="pristine|| invalid || !passed">
         Enviar
       </b-button>
@@ -142,10 +139,9 @@ export default {
         CP: null,
         Preguntas: []
       },
-      // regionSeleccionada: '',
-      // regiones: [],
       show: true,
-      errors: []
+      errors: [],
+      estado: 'null'
     }
   },
 
@@ -153,13 +149,14 @@ export default {
     onReset (evt) {
       evt.preventDefault()
       // Reset our formulario values
-      this.formulario.email = ''
-      this.formulario.nom = ''
-      this.formulario.tlf = ''
-      this.formulario.seleccion = []
-      this.formulario.cp = ''
+      this.formulario.Email = null
+      this.formulario.Nombre = null
+      this.formulario.Telefono = null
+      this.formulario.Preguntas = []
+      this.formulario.CP = null
       // Trick to reset/clear native browser form validation state
       this.show = false
+      this.estado = null
       this.$nextTick(() => {
         this.show = true
       })
@@ -184,7 +181,13 @@ export default {
         }),
         axiosConfig
       )
-        .then(alert('todo bien'))
+        .then(
+          this.respuesta()
+        )
+    },
+    respuesta () {
+      alert('El formulario se ha entregado correctamente')
+      this.estado = true
     }
   }
 }
