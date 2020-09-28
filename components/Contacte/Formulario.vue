@@ -26,7 +26,6 @@
             v-model="formulario.Nombre"
             type="text"
             name="Nombre"
-
             required
             placeholder="Digan's el teu nom"
           />
@@ -77,7 +76,7 @@
         </b-form-group>
       </ValidationProvider>
 
-      <ValidationProvider v-slot="codi" rules="cp:5,5|required" name="CP">
+      <ValidationProvider v-slot="cp" rules="cp:5,5|required" name="CP">
         <b-form-group
           id="codi-postal"
           label="Codi Postal"
@@ -85,14 +84,14 @@
         >
           <b-form-input
             id="CP"
-            v-model="formulario.Codi"
+            v-model="formulario.cp"
             required
             placeholder="D'on ets?"
             type="number"
             name="CP"
           />
           <span v-show="errors" class="input-invalid-message">
-            {{ codi.errors[0] }}
+            {{ cp.errors[0] }}
           </span>
         </b-form-group>
       </ValidationProvider>
@@ -133,7 +132,7 @@ export default {
         Nombre: null,
         Email: null,
         Telefono: null,
-        Codi: null,
+        cp: null,
         Preguntas: []
       },
       show: true,
@@ -149,7 +148,7 @@ export default {
       this.formulario.Nombre = null
       this.formulario.Telefono = null
       this.formulario.Preguntas = []
-      this.formulario.Codi = null
+      this.formulario.cp = null
       // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {
