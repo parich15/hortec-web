@@ -183,6 +183,9 @@ export default {
         }),
         axiosConfig
       )
+        .then((res) => {
+          alert('Todo Bien')
+        })
     }
 
     // encode (data) {
