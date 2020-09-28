@@ -26,7 +26,6 @@
             v-model="formulario.Nombre"
             type="text"
             name="Nombre"
-            :state="estado"
             required
             placeholder="Digan's el teu nom"
           />
@@ -49,7 +48,6 @@
             name="Email"
             required
             placeholder="Digan's el teu email"
-            :state="estado"
           />
           <span class="input-invalid-message">
             {{ errors[0] }}
@@ -71,7 +69,6 @@
             required
             placeholder="Per últim, el teu telèfon"
             type="number"
-            :state="estado"
           />
           <span class="input-invalid-message">
             {{ errors[0] }}
@@ -92,7 +89,6 @@
             placeholder="D'on ets?"
             type="number"
             name="CP"
-            :state="estado"
           />
           <span class="input-invalid-message">
             {{ errors[0] }}
@@ -102,7 +98,7 @@
 
       <ValidationProvider v-slot="{errors}" rules="required" name="preguntes">
         <b-form-group id="preguntes">
-          <b-form-radio-group id="radiobuttons" v-model="formulario.Preguntas" :state="estado" name="Preguntas">
+          <b-form-radio-group id="radiobuttons" v-model="formulario.Preguntas" name="Preguntas">
             <b-form-radio value="Informació">
               Vull més Informació
             </b-form-radio>
@@ -140,8 +136,7 @@ export default {
         Preguntas: []
       },
       show: true,
-      errors: [],
-      estado: 'null'
+      errors: []
     }
   },
 
@@ -149,14 +144,13 @@ export default {
     onReset (evt) {
       evt.preventDefault()
       // Reset our formulario values
-      this.formulario.Email = null
-      this.formulario.Nombre = null
-      this.formulario.Telefono = null
+      this.formulario.Email = ''
+      this.formulario.Nombre = ''
+      this.formulario.Telefono = ''
       this.formulario.Preguntas = []
-      this.formulario.CP = null
+      this.formulario.CP = ''
       // Trick to reset/clear native browser form validation state
       this.show = false
-      this.estado = null
       this.$nextTick(() => {
         this.show = true
       })
@@ -187,7 +181,6 @@ export default {
     },
     respuesta () {
       alert('El formulario se ha entregado correctamente')
-      this.estado = true
     }
   }
 }
