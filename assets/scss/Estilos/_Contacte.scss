@@ -177,3 +177,34 @@
        }
    }
 }
+
+@include mediaSm {
+    .Contacto{
+        .TarjetaIcono{
+            .BodyTjt{
+                width: 100%;
+            }
+        }
+        .seccion2 >div>div>.container{
+            h3{
+                font-size: calc(2vh + 1.3vw + 1vmin);
+            }
+
+            .contForm>.Formulario{
+                input{
+                    width: 100%;
+                }
+                #radiobuttons{
+                    width: 100%;
+                }
+                small{
+                    font-size: 0.8em;
+                    padding-left: 2px;
+                }
+                .contBtn{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
