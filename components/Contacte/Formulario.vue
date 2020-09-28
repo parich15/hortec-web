@@ -23,7 +23,7 @@
         >
           <b-form-input
             id="nombre"
-            v-model="formulario.nom"
+            v-model="formulario.Nombre"
             type="text"
             name="Nombre"
             required
@@ -43,7 +43,7 @@
         >
           <b-form-input
             id="email"
-            v-model="formulario.email"
+            v-model="formulario.Email"
             type="email"
             name="Email"
             required
@@ -64,7 +64,7 @@
         >
           <b-form-input
             id="telf"
-            v-model="formulario.tlf"
+            v-model="formulario.Telefono"
             name="Telefono"
             required
             placeholder="Per últim, el teu telèfon"
@@ -84,7 +84,7 @@
         >
           <b-form-input
             id="CP"
-            v-model="formulario.cp"
+            v-model="formulario.CP"
             required
             placeholder="D'on ets?"
             type="number"
@@ -98,7 +98,7 @@
 
       <ValidationProvider v-slot="{errors}" rules="required" name="preguntes">
         <b-form-group id="preguntes">
-          <b-form-radio-group id="radiobuttons" v-model="formulario.seleccion" name="Preguntas">
+          <b-form-radio-group id="radiobuttons" v-model="formulario.Preguntas" name="Preguntas">
             <b-form-radio value="Informació">
               Vull més Informació
             </b-form-radio>
@@ -136,11 +136,11 @@ export default {
   data () {
     return {
       formulario: {
-        nom: null,
-        email: null,
-        tlf: null,
-        cp: null,
-        seleccion: []
+        Nombre: null,
+        Email: null,
+        Telefono: null,
+        CP: null,
+        Preguntas: []
       },
       // regionSeleccionada: '',
       // regiones: [],
