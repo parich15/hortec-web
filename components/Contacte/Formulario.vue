@@ -12,7 +12,6 @@
     <input type="hidden" name="form-name" value="Contacto">
     <ValidationObserver v-slot="{ pristine, invalid, passed }">
       <ValidationProvider
-
         v-slot="nombre"
         name="Nombre"
         rules="required|txtmin:2|txtmax:20"
