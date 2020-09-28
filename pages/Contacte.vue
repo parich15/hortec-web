@@ -31,7 +31,7 @@
         <b-col class="col-12 col-md-6">
           <div class="container">
             <h3>
-              Formulari de Contacte
+              Formulari de <span>Contacte</span>
             </h3>
 
             <div class="formulario ">
