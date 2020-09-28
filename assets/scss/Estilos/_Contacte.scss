@@ -145,6 +145,34 @@
 
                 }
                 /*fin flechas*/
+                .custom-control-input:checked ~ .custom-control-label::before {
+                    color: #fff;
+                    border-color: #ff9800;
+                    background-color: #ff9800;
+                }
+                #radiobuttons{
+                    display: flex;
+                    justify-content: space-around;
+                    width: 80%;
+                }
+
+                .contBtn {
+                    width: 80%;
+                    .btn{
+                        font-family: 'Montserrat';
+                        font-weight: 600;
+                        width: 35%;
+                    }
+                    .btn-primary{
+                        background-color: $texto-s;
+                        border-color: $texto-s;
+                        &:focus{
+                            transition: 300ms ease-in;
+                            background-color: white;
+                            color: $texto-s
+                        }
+                    }
+                }
            }
        }
    }

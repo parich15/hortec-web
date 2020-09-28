@@ -112,7 +112,7 @@
           </span>
         </b-form-group>
       </ValidationProvider>
-      <div class="d-flex justify-content-around" style="width:80%">
+      <div class="d-flex justify-content-around contBtn">
         <b-button type="submit" variant="primary" :class="{'disabled':pristine || invalid || !passed }" :disabled="pristine|| invalid || !passed">
           Enviar
         </b-button>
