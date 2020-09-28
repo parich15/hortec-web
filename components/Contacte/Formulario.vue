@@ -85,7 +85,7 @@
         >
           <b-form-input
             id="CP"
-            v-model="formulario.CP"
+            v-model="formulario.Cp"
             required
             placeholder="D'on ets?"
             type="number"
@@ -133,7 +133,7 @@ export default {
         Nombre: null,
         Email: null,
         Telefono: null,
-        CP: null,
+        Cp: null,
         Preguntas: []
       },
       show: true,
@@ -149,7 +149,7 @@ export default {
       this.formulario.Nombre = null
       this.formulario.Telefono = null
       this.formulario.Preguntas = []
-      this.formulario.CP = null
+      this.formulario.Cp = null
       // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {
