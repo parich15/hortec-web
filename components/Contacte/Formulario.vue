@@ -85,7 +85,7 @@
         >
           <b-form-input
             id="CP"
-            v-model="formulario.cp"
+            v-model="formulario.Codi"
             required
             placeholder="D'on ets?"
             type="number"
@@ -133,7 +133,7 @@ export default {
         Nombre: null,
         Email: null,
         Telefono: null,
-        cp: null,
+        Codi: null,
         Preguntas: []
       },
       show: true,
@@ -149,7 +149,7 @@ export default {
       this.formulario.Nombre = null
       this.formulario.Telefono = null
       this.formulario.Preguntas = []
-      this.formulario.cp = null
+      this.formulario.Codi = null
       // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {
@@ -177,7 +177,7 @@ export default {
         axiosConfig
       )
         .then(
-          alert('El formulario se ha entregado correctamente')
+          alert("El formulario s'ha entregat correctament")
         )
     }
   }
