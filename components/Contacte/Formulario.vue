@@ -1,6 +1,6 @@
 <template>
   <b-form
-    class="formulario"
+    class="Formulario"
     name="Contacto"
     method="post"
     data-netlify="true"
@@ -12,7 +12,8 @@
     <input type="hidden" name="form-name" value="Contacto">
     <ValidationObserver v-slot="{ pristine, invalid, passed }">
       <ValidationProvider
-        v-slot="{ errors }"
+
+        v-slot="nombre"
         name="Nombre"
         rules="required|txtmin:2|txtmax:20"
       >
@@ -26,16 +27,17 @@
             v-model="formulario.Nombre"
             type="text"
             name="Nombre"
+            :state="estado"
             required
             placeholder="Digan's el teu nom"
           />
-          <span class="input-invalid-message">
-            {{ errors[0] }}
+          <span v-show="errors" class="input-invalid-message">
+            {{ nombre.errors[0] }}
           </span>
         </b-form-group>
       </ValidationProvider>
 
-      <ValidationProvider v-slot="{errors}" rules="required|txtmax:30" name="email">
+      <ValidationProvider v-slot="email" rules="required|txtmax:30" name="email">
         <b-form-group
           id="email-contacto"
           label="Quin es el teu correu?:"
@@ -48,14 +50,15 @@
             name="Email"
             required
             placeholder="Digan's el teu email"
+            :state="estado"
           />
-          <span class="input-invalid-message">
-            {{ errors[0] }}
+          <span v-show="errors" class="input-invalid-message">
+            {{ email.errors[0] }}
           </span>
         </b-form-group>
       </ValidationProvider>
 
-      <ValidationProvider v-slot="{ errors }" rules="minmax:9,9|required" name="telefono">
+      <ValidationProvider v-slot="Telefono" rules="minmax:9,9|required" name="telefono">
         <b-form-group
           id="telefon-contacte"
           label="El teu numero de telèfon:"
@@ -69,14 +72,15 @@
             required
             placeholder="Per últim, el teu telèfon"
             type="number"
+            :state="estado"
           />
-          <span class="input-invalid-message">
-            {{ errors[0] }}
+          <span v-show="errors" class="input-invalid-message">
+            {{ Telefono.errors[0] }}
           </span>
         </b-form-group>
       </ValidationProvider>
 
-      <ValidationProvider v-slot="{ errors }" rules="cp:5,5|required" name="CP">
+      <ValidationProvider v-slot="codi" rules="cp:5,5|required" name="CP">
         <b-form-group
           id="codi-postal"
           label="Codi Postal"
@@ -89,16 +93,17 @@
             placeholder="D'on ets?"
             type="number"
             name="CP"
+            :state="estado"
           />
-          <span class="input-invalid-message">
-            {{ errors[0] }}
+          <span v-show="errors" class="input-invalid-message">
+            {{ codi.errors[0] }}
           </span>
         </b-form-group>
       </ValidationProvider>
 
-      <ValidationProvider v-slot="{errors}" rules="required" name="preguntes">
+      <ValidationProvider v-slot="pregunta" rules="required" name="preguntes">
         <b-form-group id="preguntes">
-          <b-form-radio-group id="radiobuttons" v-model="formulario.Preguntas" name="Preguntas">
+          <b-form-radio-group id="radiobuttons" v-model="formulario.Preguntas" :state="estado" name="Preguntas">
             <b-form-radio value="Informació">
               Vull més Informació
             </b-form-radio>
@@ -106,18 +111,11 @@
               Vull fer me client
             </b-form-radio>
           </b-form-radio-group>
-          <span class="input-invalid-message">
-            {{ errors[0] }}
+          <span v-show="errors" class="input-invalid-message">
+            {{ pregunta.errors[0] }}
           </span>
         </b-form-group>
       </ValidationProvider>
-      <!-- <div>
-          <select id="ciudades" v-model="regionSeleccionada" name="Ciudad">
-            <option v-for="region in regiones[0]" :key="region.isoCode" :value="region.name">
-              {{ region.name }}
-            </option>
-          </select>
-        </div> -->
       <b-button type="submit" variant="primary" :class="{'disabled':pristine || invalid || !passed }" :disabled="pristine|| invalid || !passed">
         Enviar
       </b-button>
@@ -142,10 +140,9 @@ export default {
         CP: null,
         Preguntas: []
       },
-      // regionSeleccionada: '',
-      // regiones: [],
       show: true,
-      errors: []
+      errors: [],
+      estado: 'null'
     }
   },
 
@@ -153,13 +150,14 @@ export default {
     onReset (evt) {
       evt.preventDefault()
       // Reset our formulario values
-      this.formulario.email = ''
-      this.formulario.nom = ''
-      this.formulario.tlf = ''
-      this.formulario.seleccion = []
-      this.formulario.cp = ''
+      this.formulario.Email = null
+      this.formulario.Nombre = null
+      this.formulario.Telefono = null
+      this.formulario.Preguntas = []
+      this.formulario.CP = null
       // Trick to reset/clear native browser form validation state
       this.show = false
+      this.estado = null
       this.$nextTick(() => {
         this.show = true
       })
@@ -184,7 +182,13 @@ export default {
         }),
         axiosConfig
       )
-        .then(alert('todo bien'))
+        .then(
+          this.respuesta()
+        )
+    },
+    respuesta () {
+      alert('El formulario se ha entregado correctamente')
+      this.estado = true
     }
   }
 }

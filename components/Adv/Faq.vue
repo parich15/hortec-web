@@ -1,4 +1,5 @@
 <template>
+<!-- eslint-disable -->
   <div class="containerComponenteFaq">
     <div v-for="(pregunta,idx) in preguntas" :key="idx" class="faqItem" data-aos="fade-in" data-aos-delay="300">
       <b-button v-b-toggle="pregunta.id" block class="btnFaq">
@@ -11,6 +12,7 @@
       </b-collapse>
     </div>
   </div>
+  <!-- eslint-enable -->
 </template>
 
 <script>
