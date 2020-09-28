@@ -9,8 +9,8 @@
     @submit.prevent="handleSubmit"
     @reset="onReset"
   >
+    <input type="hidden" name="form-name" value="Contacto">
     <ValidationObserver v-slot="{ pristine, invalid, passed }">
-      <input type="hidden" name="form-name" value="Contacto">
       <ValidationProvider
         v-slot="{ errors }"
         name="Nombre"
@@ -165,26 +165,47 @@ export default {
       })
     },
     encode (data) {
-      const formData = new FormData()
-      for (const key of Object.keys(data)) {
-        formData.append(key, data[key])
-      }
-      return formData
+      return Object.keys(data)
+        .map(
+          key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+        )
+        .join('&')
     },
-    handleSubmit (e) {
+    handleSubmit () {
       const axiosConfig = {
         header: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }
       axios.post(
         '/Contacte',
         this.encode({
-          'form-name': e.target.getAttribute('name'),
+          'form-name': 'Contacto',
           ...this.formulario
         }),
         axiosConfig
       )
-        .then(alert('todo bien'))
     }
+
+    // encode (data) {
+    //   const formData = new FormData()
+    //   for (const key of Object.keys(data)) {
+    //     formData.append(key, data[key])
+    //   }
+    //   return formData
+    // },
+    // handleSubmit (e) {
+    //   const axiosConfig = {
+    //     header: { 'Content-Type': 'application/x-www-form-urlencoded' }
+    //   }
+    //   axios.post(
+    //     '/Contacte',
+    //     this.encode({
+    //       'form-name': e.target.getAttribute('name'),
+    //       ...this.formulario
+    //     }),
+    //     axiosConfig
+    //   )
+    //     .then(alert('todo bien'))
+    // }
   }
 }
 
