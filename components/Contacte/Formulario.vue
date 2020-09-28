@@ -112,12 +112,14 @@
           </span>
         </b-form-group>
       </ValidationProvider>
-      <b-button type="submit" variant="primary" :class="{'disabled':pristine || invalid || !passed }" :disabled="pristine|| invalid || !passed">
-        Enviar
-      </b-button>
-      <b-button type="reset" variant="outline-danger">
-        Esborra
-      </b-button>
+      <div class="d-flex justify-content-around" style="width:80%">
+        <b-button type="submit" variant="primary" :class="{'disabled':pristine || invalid || !passed }" :disabled="pristine|| invalid || !passed">
+          Enviar
+        </b-button>
+        <b-button type="reset" variant="outline-danger">
+          Esborra
+        </b-button>
+      </div>
     </ValidationObserver>
   </b-form>
 </template>
