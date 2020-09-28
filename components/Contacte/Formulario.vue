@@ -27,7 +27,7 @@
             v-model="formulario.Nombre"
             type="text"
             name="Nombre"
-            :state="estado"
+
             required
             placeholder="Digan's el teu nom"
           />
@@ -50,7 +50,6 @@
             name="Email"
             required
             placeholder="Digan's el teu email"
-            :state="estado"
           />
           <span v-show="errors" class="input-invalid-message">
             {{ email.errors[0] }}
@@ -72,7 +71,6 @@
             required
             placeholder="Per últim, el teu telèfon"
             type="number"
-            :state="estado"
           />
           <span v-show="errors" class="input-invalid-message">
             {{ Telefono.errors[0] }}
@@ -93,7 +91,6 @@
             placeholder="D'on ets?"
             type="number"
             name="CP"
-            :state="estado"
           />
           <span v-show="errors" class="input-invalid-message">
             {{ codi.errors[0] }}
@@ -103,7 +100,7 @@
 
       <ValidationProvider v-slot="pregunta" rules="required" name="preguntes">
         <b-form-group id="preguntes">
-          <b-form-radio-group id="radiobuttons" v-model="formulario.Preguntas" :state="estado" name="Preguntas">
+          <b-form-radio-group id="radiobuttons" v-model="formulario.Preguntas" name="Preguntas">
             <b-form-radio value="Informació">
               Vull més Informació
             </b-form-radio>
@@ -141,8 +138,7 @@ export default {
         Preguntas: []
       },
       show: true,
-      errors: [],
-      estado: 'null'
+      errors: []
     }
   },
 
@@ -157,7 +153,6 @@ export default {
       this.formulario.CP = null
       // Trick to reset/clear native browser form validation state
       this.show = false
-      this.estado = null
       this.$nextTick(() => {
         this.show = true
       })
@@ -183,12 +178,8 @@ export default {
         axiosConfig
       )
         .then(
-          this.respuesta()
+          alert('El formulario se ha entregado correctamente')
         )
-    },
-    respuesta () {
-      alert('El formulario se ha entregado correctamente')
-      this.estado = true
     }
   }
 }
