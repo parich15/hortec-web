@@ -111,6 +111,13 @@
           </span>
         </b-form-group>
       </ValidationProvider>
+      <!-- <div>
+          <select id="ciudades" v-model="regionSeleccionada" name="Ciudad">
+            <option v-for="region in regiones[0]" :key="region.isoCode" :value="region.name">
+              {{ region.name }}
+            </option>
+          </select>
+        </div> -->
       <b-button type="submit" variant="primary" :class="{'disabled':pristine || invalid || !passed }" :disabled="pristine|| invalid || !passed">
         Enviar
       </b-button>
@@ -135,6 +142,8 @@ export default {
         CP: null,
         Preguntas: []
       },
+      // regionSeleccionada: '',
+      // regiones: [],
       show: true,
       errors: []
     }
@@ -144,11 +153,11 @@ export default {
     onReset (evt) {
       evt.preventDefault()
       // Reset our formulario values
-      this.formulario.Email = ''
-      this.formulario.Nombre = ''
-      this.formulario.Telefono = ''
-      this.formulario.Preguntas = []
-      this.formulario.CP = ''
+      this.formulario.email = ''
+      this.formulario.nom = ''
+      this.formulario.tlf = ''
+      this.formulario.seleccion = []
+      this.formulario.cp = ''
       // Trick to reset/clear native browser form validation state
       this.show = false
       this.$nextTick(() => {
@@ -175,12 +184,7 @@ export default {
         }),
         axiosConfig
       )
-        .then(
-          this.respuesta()
-        )
-    },
-    respuesta () {
-      alert('El formulario se ha entregado correctamente')
+        .then(alert('todo bien'))
     }
   }
 }
