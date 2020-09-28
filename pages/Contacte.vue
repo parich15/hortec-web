@@ -29,12 +29,12 @@
     <b-container class="seccion2" fluid>
       <b-row class="py-4">
         <b-col class="col-12 col-md-6">
-          <div class="container">
+          <div class="container py-3">
             <h3>
               Formulari de <span>Contacte</span>
             </h3>
 
-            <div class="formulario ">
+            <div class="contForm py-3">
               <formulario />
             </div>
           </div>
