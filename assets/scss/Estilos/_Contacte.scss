@@ -2,7 +2,7 @@
    .TarjetaIcono{
        .BodyTjt{
         transition: 250ms ease-in;
-        width: 50%;
+        width: 75%;
         //justify-content: space-evenly;
         background: white;
         box-shadow: 0px 0 4px 1px #00000078;
@@ -31,7 +31,7 @@
            }
         }
         &:hover{
-            transform: scale(1.15);
+            transform: scale(1.03);
             transition: 250ms ease-in;
             .icono>svg{
                 transform: scale(1.1);
@@ -72,7 +72,7 @@
            h3{
                font-family: 'Montserrat';
                font-weight: 600;
-               font-size: calc(1vh + 1vw + 1vmin);
+               font-size: calc(1.5vh + 1.4vw + 1vmin);
                color:$texto-p;
                span{
                    color:$texto-s;
@@ -175,6 +175,15 @@
                 }
            }
        }
+       >div>div>.contenedorFoto{
+           //background-image: url('/img/Contacto/FotoContacto.jpg');
+           background-image: url('/img/Contacto/FotoContacto.jpg');
+            background-position-x: 50%;
+           height: 100%
+       }
+       >div>.colFoto{
+           padding:0;
+       }
    }
 }
 
@@ -187,7 +196,7 @@
         }
         .seccion2 >div>div>.container{
             h3{
-                font-size: calc(2vh + 1.3vw + 1vmin);
+                font-size: calc(1.8vh + 1vw + 1.5vmin)
             }
 
             .contForm>.Formulario{
@@ -205,6 +214,10 @@
                     width: 100%;
                 }
             }
+        }
+        .seccion2 >div>div>.contenedorFoto{
+            height: 300px!important;
+            background-size: cover;
         }
     }
 }

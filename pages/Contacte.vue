@@ -13,7 +13,7 @@
     <b-container class="seccion1" fluid>
       <b-row class="my-5">
         <b-col class="col-12 col-md-7 d-flex">
-          <div class="container mx-auto my-auto txtCont">
+          <div class="container mx-auto my-auto txtCont" data-aos="fade-up">
             <h3><span>Contacte</span> amb nosaltres</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt pariatur qui laborum est aliquid earum tenetur saepe beatae. Aspernatur consequatur dignissimos fugit corporis iure soluta temporibus exercitationem impedit molestiae nobis.
@@ -27,9 +27,9 @@
       </b-row>
     </b-container>
     <b-container class="seccion2" fluid>
-      <b-row class="py-4">
+      <b-row>
         <b-col class="col-12 col-md-6">
-          <div class="container py-3">
+          <div class="container py-5" data-aos="fade-in">
             <h3>
               Formulari de <span>Contacte</span>
             </h3>
@@ -38,6 +38,9 @@
               <formulario />
             </div>
           </div>
+        </b-col>
+        <b-col class="col-12 col-md-6 colFoto">
+          <div class="contenedorFoto" />
         </b-col>
       </b-row>
     </b-container>

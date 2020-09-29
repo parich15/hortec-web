@@ -51,7 +51,7 @@
             Ecològica (CRAE), d’àmbit estatal.
           </p>
           <div class="btnCop d-flex">
-            <b-button variant="outline-warning">
+            <b-button variant="outline-warning" to="/Cooperativa">
               Més Informació
             </b-button>
           </div>
@@ -84,7 +84,7 @@
               mantenir les demandes dels nostres clients.
             </p>
             <div class="d-flex btnFam">
-              <b-button variant="outline-warning">
+              <b-button variant="outline-warning" to="/Families">
                 Més Informació
               </b-button>
             </div>
@@ -112,9 +112,6 @@
                   En aquests moments, la cooperativa HORTEC està formada per 18 socis actius amb les seves famílies i/o treballadors.
                   La majoria som empreses familiars agràries. Les terres que conreen estan distribuïdes per diverses comarques del territori català.
                 </p>
-                <b-button variant="outline-warning">
-                  Donar-me d'alta
-                </b-button>
               </div>
             </div>
           </div>
@@ -153,7 +150,7 @@
             <h3>¿Vols que parlem?</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tenetur porro unde suscipit dolor nihil quis. Maxime, architecto sint quas illo corrupti aliquam quisquam, error enim, neque dolorum totam porro. architecto sint quas illo corrupti aliquam quisquam, error enim, neque dolorum totam porro</p>
             <div class="botones-contacto d-flex">
-              <b-button variant="outline-warning">
+              <b-button variant="outline-warning" to="/Contacte">
                 Sol·licitar informació
               </b-button>
             </div>

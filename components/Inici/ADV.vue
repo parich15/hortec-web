@@ -17,7 +17,7 @@
             </p>
           </div>
           <div class="d-flex justify-content-center">
-            <b-button>
+            <b-button to="/ADV">
               Informació sobre l'Adv
             </b-button>
           </div>
