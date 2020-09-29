@@ -17,6 +17,14 @@ $texto-so: #c66900!default;
 $color-logo: #e74914!default;
 
 
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  
+
 /*Mixins*/
 
 // Media Query Mixins - Responsive

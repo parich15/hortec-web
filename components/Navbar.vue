@@ -25,7 +25,7 @@
           <b-nav-item to="/Equip">
             Equip
           </b-nav-item>
-          <b-nav-item to="#">
+          <b-nav-item to="/Blog">
             Blog
           </b-nav-item>
           <b-nav-item to="/Contacte">
