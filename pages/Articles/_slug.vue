@@ -19,6 +19,8 @@
       <b-col class="col-12 colBlog">
         <div class="container contenedorBlog" data-aos="fade-up" data-aos-delay="1300">
           <nuxt-content :document="articulo" />
+          <small v-if="formatearFecha(articulo.createdAt) === formatearFecha(articulo.updatedAt)" class="escrit mb-4">Escrit el {{ formatearFecha(articulo.createdAt) }}</small>
+          <small v-else class="modif">Modificat el {{ formatearFecha(articulo.updatedAt) }}</small>
         </div>
       </b-col>
     </b-row>
@@ -46,5 +48,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+.escrit, .modif {
+color:gray
+}
 </style>

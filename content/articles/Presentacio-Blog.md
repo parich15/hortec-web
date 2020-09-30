@@ -2,7 +2,7 @@
 Titulo: Presentació Nova Web
 Descripcion: El nou blog i web d'Hortec 
 Imagen: https://images.unsplash.com/photo-1557844352-761f2565b576?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
-alt: El primer article del Blog
+alt: Presentació Blog Hortec
 ---
 
 # Benvingut al Blog d'Hortec
