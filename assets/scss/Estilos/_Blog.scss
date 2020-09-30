@@ -1,0 +1,50 @@
+.BlogHome{
+    .BlogPosts{
+        background-color: $background-pl;
+        .Posts{
+            .entrada{
+                
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                
+                .thumbnail{
+                    height: 215px;
+                    width: 300px;
+                    border-radius: 25px;
+                }
+                .titEnt{
+                    font-family: 'Montserrat';
+                    margin-top: 0.8em;
+                  a{
+                      color: $texto-p;
+                      text-decoration: none;
+                    }
+                }
+                .descEnt{
+                    font-family: 'Montserrat';
+                    color: $texto-pl
+                }
+
+                &:hover{
+                    
+                    .thumbnail{
+                        transform: scale(1.05);
+                        transition: 250ms ease-in;
+                    }
+                    .titEnt{
+                        color: $texto-s;
+                        text-decoration: underline;
+                        transition: 250ms ease-in;
+                        &:hover{
+                            a {
+                                color: $texto-s
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
