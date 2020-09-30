@@ -82,6 +82,9 @@ $color-logo: #e74914!default;
     &[filter-color="black"]{
         @include linear-gradient (rgba(44, 44, 44, 0.2), rgba(23, 20, 19, 0.7));
     }
+    &[filter-color="blog"]{
+        @include linear-gradient(rgba(44, 44, 44, 0.26), rgba(23, 20, 19, 0.48));
+    }
 }
 
 //Transiciones
