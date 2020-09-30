@@ -17,16 +17,21 @@
     </b-row>
     <b-row class="BlogContent">
       <b-col class="col-12 colBlog">
-        <div class="container contenedorBlog">
+        <div class="container contenedorBlog" data-aos="fade-up" data-aos-delay="1300">
           <nuxt-content :document="articulo" />
         </div>
       </b-col>
     </b-row>
+    <botonBack />
   </b-container>
 </template>
 
 <script>
+import BotonBack from '~/components/Blog/BotonBack.vue'
 export default {
+  components: {
+    BotonBack
+  },
   async asyncData ({ $content, params }) {
     const articulo = await $content('articles', params.slug).fetch()
     return { articulo }
@@ -41,51 +46,5 @@ export default {
 </script>
 
 <style lang="scss">
-.articulo{
-    .imgTit{
-    padding: 0;
-    overflow: hidden;
-    .contenedor{
-      position: relative;
-      .imagen{
-        width: 100%;
-        height: 65vh;
-        object-fit: cover;
-        position: relative;
-        z-index: -1;
-        //filter: contrast(60%);
-      }
-      .tituloBlog{
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        bottom: 45%;
-        text-align: center;
-          .TituloHero{
-            color: white;
-            font-family: 'Montserrat';
-            font-size: calc(2vw + 2vh + 1vmin);
-          }
-          .descHero{
-              font-size: calc(0.5vw + 0.5vh + 1vmin);
-              font-family: Montserrat;
-              color: wheat;
-              animation-delay: 1s;
-          }
-      }
-    }
-  }
-  .BlogContent{
-      .colBlog{
-        margin: 3em 0;
-        .contenedorBlog{
-          .nuxt-content h1{
-            font-family: 'Montserrat';
-          }
-        }
-      }
-  }
-}
+
 </style>
