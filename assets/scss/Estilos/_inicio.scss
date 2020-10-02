@@ -607,6 +607,7 @@
         -webkit-box-direction: normal!important;
             -ms-flex-flow: column wrap!important;
                 flex-flow: column wrap!important;
+                flex-wrap: wrap;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center; 
@@ -636,6 +637,7 @@
             -webkit-box-direction: reverse!important;
                 -ms-flex-direction: column-reverse!important;
                     flex-direction: column-reverse!important;
+                    flex-wrap: wrap-reverse;
             -ms-flex-flow: column wrap;
                 flex-flow: column wrap;
             .colTxt {
@@ -668,6 +670,7 @@
         -webkit-box-direction: normal!important;
             -ms-flex-flow: column wrap!important;
                 flex-flow: column wrap!important;
+                flex-wrap: wrap;
         overflow: hidden!important;
         .containerAdv{
              .contenido {
@@ -697,6 +700,7 @@
             -webkit-box-direction: normal;
                 -ms-flex-flow: column wrap;
                     flex-flow: column wrap;
+                    flex-wrap: wrap;
         }
     }
 
