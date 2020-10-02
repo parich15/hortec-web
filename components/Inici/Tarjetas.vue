@@ -26,7 +26,7 @@
           </div>
         </div>
       </b-col>
-      <b-col class="col-md-4 d-flex m-auto">
+      <b-col class="col-12  col-md-4 d-flex m-auto">
         <div data-aos="fade-up">
           <div class="contenedorTjt d-flex">
             <div class="iconoTjt mb-2">
@@ -44,7 +44,7 @@
           </div>
         </div>
       </b-col>
-      <b-col class="col-md-4 d-flex m-auto">
+      <b-col class="col-12 col-md-4 d-flex m-auto">
         <div data-aos="fade-right">
           <div class="contenedorTjt d-flex">
             <div class="iconoTjt mb-2">
@@ -64,7 +64,7 @@
       </b-col>
     </b-row>
     <b-row class="sepTjts">
-      <b-col class="col lg-12 separadorBot p-0">
+      <b-col class="col-12 separadorBot p-0">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#8cb201" fill-opacity="1" d="M0,128L80,117.3C160,107,320,85,480,90.7C640,96,800,128,960,117.3C1120,107,1280,53,1360,26.7L1440,0L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" /></svg>
       </b-col>
     </b-row>
