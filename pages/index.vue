@@ -18,15 +18,14 @@
     </div>
     <b-container class="MainPresentacion" fluid>
       <b-row class="fila1">
-        <b-col class="presentacion" data-aos="fade-up">
+        <b-col class="col-12 presentacion" data-aos="fade-up">
           <div>
             <h2>Benvingut a <span>Hortec</span></h2>
-          </div>
-          <div>
+
             <p>Som la primera cooperativa catalana compromesa amb <strong>l’agricultura ecològica</strong></p>
           </div>
         </b-col>
-        <b-col class="presentacion2" data-aos="fade-up">
+        <b-col class="col-12 presentacion2" data-aos="fade-up">
           <div class="txtPre">
             <p>
               Treballem amb estima i dedicació perquè
@@ -39,7 +38,7 @@
     </b-container>
     <b-container class="Principal" fluid>
       <b-row class="cooperativa">
-        <b-col class="col-md-6 txtCop" data-aos="fade-right">
+        <b-col class="col-12 col-md-6 txtCop" data-aos="fade-right">
           <h3>La Cooperativa</h3>
           <p class="mr-5">
             HORTEC, Societat Cooperativa Catalana Limitada es va crear el 1991
@@ -56,7 +55,7 @@
             </b-button>
           </div>
         </b-col>
-        <b-col class="col-md-6 imgCop" data-aos="fade-left">
+        <b-col class="col-12 col-md-6 imgCop" data-aos="fade-left">
           <div class="espacio" />
           <!--<b-img src="img/cooperativa.jpg" rounded width="300" height="300" />-->
         </b-col>
@@ -64,14 +63,14 @@
     </b-container>
     <b-container class="families" fluid>
       <b-row class="rowFamilies d-flex">
-        <b-col class="col-lg-6 colImg d-flex my-5">
+        <b-col class="col-12col-lg-6 colImg d-flex my-5">
           <div data-aos="fade-up">
             <div class="contenedorImg my-3">
               <b-img src="img/families.jpg" width="500" height="500" />
             </div>
           </div>
         </b-col>
-        <b-col class="col-lg-6 colTxt d-flex">
+        <b-col class="col-12 col-lg-6 colTxt d-flex">
           <div data-aos="fade-up">
             <h3>Famílies</h3>
             <h6>Coneix els nostres productes</h6>
@@ -100,7 +99,7 @@
     </b-container>
     <b-container class="empresasHortec" fluid>
       <b-row class="rowEmpresas">
-        <b-col class="col-md-5">
+        <b-col class="col-12 col-md-5">
           <div data-aos="fade-right">
             <div class="d-flex contEmpresa m-3">
               <div class="cabeceraEmpresa">

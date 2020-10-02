@@ -1,6 +1,6 @@
 <template>
   <b-row class="rowLocalizacion">
-    <b-col class="col-md-4 d-flex infoLoc">
+    <b-col class="col-12 col-md-4 d-flex infoLoc">
       <div data-aos="fade-up">
         <div class="container-localizacion d-flex">
           <h3>¿On som?</h3>
@@ -29,7 +29,7 @@
         </div>
       </div>
     </b-col>
-    <b-col class="col-md-4 col-xs-12 d-flex mapLoc">
+    <b-col class="col-12 col-md-4 d-flex mapLoc">
       <div class="container-mapa" data-aos="fade-up">
         <div class="mapa">
           <iframe

@@ -1,14 +1,14 @@
 <template>
   <div>
     <b-row class="titTjt d-flex justify-content-center">
-      <b-col class="col-md-6 tjtTit ">
+      <b-col class="col-12 col-md-6 tjtTit ">
         <div data-aos="fade-up">
           <h2>Els valors d' Hortec</h2>
         </div>
       </b-col>
     </b-row>
     <b-row class="filaTjts d-flex">
-      <b-col class="col-md-4 d-flex m-auto colTjt">
+      <b-col class="col-12 col-md-4 d-flex m-auto colTjt">
         <div data-aos="fade-left">
           <div class="contenedorTjt d-flex">
             <div class="iconoTjt mb-2">
