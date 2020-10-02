@@ -63,7 +63,7 @@
     </b-container>
     <b-container class="families" fluid>
       <b-row class="rowFamilies d-flex">
-        <b-col class="col-12col-lg-6 colImg d-flex my-5">
+        <b-col class="col-12 col-lg-6 colImg d-flex my-5">
           <div data-aos="fade-up">
             <div class="contenedorImg my-3">
               <b-img src="img/families.jpg" width="500" height="500" />
@@ -99,7 +99,7 @@
     </b-container>
     <b-container class="empresasHortec" fluid>
       <b-row class="rowEmpresas">
-        <b-col class="col-12 col-md-5">
+        <b-col class="col-12 col-md-5 my-5">
           <div data-aos="fade-right">
             <div class="d-flex contEmpresa m-3">
               <div class="cabeceraEmpresa">
