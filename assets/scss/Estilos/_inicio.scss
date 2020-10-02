@@ -727,6 +727,13 @@
         .contEmpresa{
             margin-bottom: 2em;
         }
+        .container-logo-empresa{
+            flex-flow: column wrap;
+            align-items: center;
+            .logoEmpresa{
+                margin: 2em 0;
+            }
+        }
     }
     }
     .contacto{
