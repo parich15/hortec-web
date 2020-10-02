@@ -1,9 +1,4 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
+
 
 // Titulo y Subititulo
 .cabecera {
@@ -36,7 +31,8 @@
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-                flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
     }
     .presentacion {
         display: -webkit-box;
@@ -46,7 +42,8 @@
         -webkit-box-direction: normal;
             -ms-flex-flow: column wrap;
                 flex-flow: column wrap;
-                flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
@@ -73,7 +70,8 @@
         }
     }
     .presentacion2 {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -99,7 +97,11 @@
 }
 
 //Contenedor Principal 
-
+.Inicio{
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1;
+            flex: 1 1
+}
 .Principal {
     -webkit-box-shadow: 0 0 6px 8px rgba(0, 0, 0, 0.101562);
             box-shadow: 0 0 6px 8px rgba(0, 0, 0, 0.101562);
@@ -602,6 +604,7 @@
            -webkit-box-direction: normal;
                -ms-flex-direction: column;  
                  flex-direction: column;
+                 height: auto;
     }
     .MainPresentacion .presentacion2 .txtPre {
         font-size: 1.5em!important;
@@ -615,7 +618,8 @@
         -webkit-box-direction: normal!important;
             -ms-flex-flow: column wrap!important;
                 flex-flow: column wrap!important;
-                flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center; 
@@ -645,7 +649,8 @@
             -webkit-box-direction: reverse!important;
                 -ms-flex-direction: column-reverse!important;
                     flex-direction: column-reverse!important;
-                    flex-wrap: wrap-reverse;
+                    -ms-flex-wrap: wrap-reverse;
+                        flex-wrap: wrap-reverse;
             -ms-flex-flow: column wrap;
                 flex-flow: column wrap;
             .colTxt {
@@ -678,7 +683,8 @@
         -webkit-box-direction: normal!important;
             -ms-flex-flow: column wrap!important;
                 flex-flow: column wrap!important;
-                flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
         overflow: hidden!important;
         .containerAdv{
              .contenido {
@@ -708,7 +714,8 @@
             -webkit-box-direction: normal;
                 -ms-flex-flow: column wrap;
                     flex-flow: column wrap;
-                    flex-wrap: wrap;
+                    -ms-flex-wrap: wrap;
+                        flex-wrap: wrap;
         }
     }
 
@@ -723,7 +730,8 @@
         -webkit-box-direction: reverse!important;
             -ms-flex-direction: column-reverse!important;
                 flex-direction: column-reverse!important;
-                flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
         .mosaico {
             width: 320px;
             height: auto;
@@ -754,7 +762,8 @@
         -webkit-box-direction: normal;
             -ms-flex-flow: column wrap;
                 flex-flow: column wrap;
-                flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
         .infoLoc{
             margin-bottom: 50px;
             .container-localizacion {
@@ -774,6 +783,8 @@
             -ms-flex-item-align: center;
                 -ms-grid-row-align: center;
                 align-self: center;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
 
         }
     }
