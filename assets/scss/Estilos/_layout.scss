@@ -1,214 +1,248 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: border-box;
-    margin: 0;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+/*CABECERAS*/
+.cabecera{
+  min-height: 100vh;
+  max-height: 999px;
+  padding: 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+
+  & > .content{
+    margin-top: 12%;
+    text-align: center;
+    margin-bottom: 50px;
   }
 
-  /*CABECERAS*/
-  .cabecera{
-    min-height: 100vh;
-    max-height: 999px;
-    padding: 0;
-    color: white;
-    position: relative;
-    overflow: hidden;
-  
-    & > .content{
-      margin-top: 12%;
-      text-align: center;
-      margin-bottom: 50px;
-    }
-  
-    &.cabecera-pequeña{
-        min-height: 60vh;
-        max-height: 440px;
-    }
-  
-    &:before{
-        background-color: rgba(0,0,0,.3);
-    }
-  
-    > .b-container-cabecera{
-      z-index: 2;
-      padding-top: 12vh;
-      padding-bottom: 40px;
-    }
-  
-      .imagen-cabecera{
-          position: absolute;
-          background-size: cover;
-          background-position: center center;
-          width: 100%;
-          height: 100%;
-          z-index: -1;
-      }
-  
-      .content-center{
+  &.cabecera-pequeña{
+      min-height: 60vh;
+      max-height: 440px;
+  }
+
+  &:before{
+      background-color: rgba(0,0,0,.3);
+  }
+
+  > .b-container-cabecera{
+    z-index: 2;
+    padding-top: 12vh;
+    padding-bottom: 40px;
+  }
+
+    .imagen-cabecera{
         position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 2;
-        -ms-transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: #FFFFFF;
-        padding: 0 15px;
+        background-size: cover;
+        background-position: center center;
         width: 100%;
-        max-width: 880px;
-  
-      }
-  
-      footer{
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-      }
-      .container{
-          height: 100%;
-          z-index: 1;
-          text-align: center;
-          position: relative;
-      }
-   
-      &:after,
-      &:before{
-          position: absolute;
-          z-index: 0;
-          width: 100%;
-          height: 100%;
-          display: block;
-          left: 0;
-          top: 0;
-          content: "";
-      }
-  }
+        height: 100%;
+        z-index: -1;
+    }
 
-  .clear-filter{
+    .content-center{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #FFFFFF;
+      padding: 0 15px;
+      width: 100%;
+      max-width: 880px;
+
+    }
+
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    .container{
+        height: 100%;
+        z-index: 1;
+        text-align: center;
+        position: relative;
+    }
+ 
     &:after,
     &:before{
-        display: none;
+        position: absolute;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        left: 0;
+        top: 0;
+        content: "";
     }
-    &[filter-color="black"]{
-        @include linear-gradient (rgba(44, 44, 44, 0.2), rgba(23, 20, 19, 0.7));
-    }
+}
+
+.clear-filter{
+  &:after,
+  &:before{
+      display: none;
+  }
+  &[filter-color="black"]{
+      @include linear-gradient (rgba(44, 44, 44, 0.2), rgba(23, 20, 19, 0.7));
+  }
 }
 
 /*Barra de Navegación*/
 html::-webkit-scrollbar{
-  display: none;
-  width: 0!important;
-  
+display: none;
+width: 0!important;
+
 }
 //Cabecera Pequeña
 .cabecera-peque {
-  min-height: 60vh;
-  min-width: 999px;
-  display: flex;
-  padding: 0;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  .imagenCabeceraPeque {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -50;
-    overflow: hidden;
-    //Imagenes Cabecera Paginas
-    &.cooperativaImg{
-      background: url(/img/hcoop.jpg);
-    }
-    &.familiesImg{
-      background: url(/img/hfam.jpg);
-    }
-    &.advImg{
-      background: url(/img/hadv.jpg);
-    }
-    &.equipImg{
-      background: url(/img/Equip/hequip.jpg);
-    }
-    &.contacteImg{
-      background: url(/img/hcontacte.jpg);
-    }
+min-height: 60vh;
+min-width: 999px;
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+padding: 0;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+-webkit-box-align: center;
+    -ms-flex-align: center;
+        align-items: center;
+position: relative;
+.imagenCabeceraPeque {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -50;
+  overflow: hidden;
+  //Imagenes Cabecera Paginas
+  &.cooperativaImg{
+    background: url(/img/hcoop.jpg);
   }
-  .contenido-cab {
-    width: 100%;
-    justify-content: center;
-    .tit-cop {
-      text-align: center;
-      color: $background-pl;
-      font-family: 'Montserrat';
-      h1 {
-        font-weight: 600!important;
-        span{
-          color: $texto-s;
-        }
+  &.familiesImg{
+    background: url(/img/hfam.jpg);
+  }
+  &.advImg{
+    background: url(/img/hadv.jpg);
+  }
+  &.equipImg{
+    background: url(/img/Equip/hequip.jpg);
+  }
+  &.contacteImg{
+    background: url(/img/hcontacte.jpg);
+  }
+}
+.contenido-cab {
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  .tit-cop {
+    text-align: center;
+    color: $background-pl;
+    font-family: 'Montserrat';
+    h1 {
+      font-weight: 600!important;
+      span{
+        color: $texto-s;
       }
     }
   }
+}
 }
 
 //FOOTER
 
 #Footer{
- height: 10vh;
- background-color: $background-s;
- .row-Footer{
-   align-items: center;
-   height: 100%;
-   .primerSector{
-     font-family: 'Montserrat';
-     font-size: 1.2em;
-     color:white;
-     justify-self: center;
-     >div>p{
-       margin-bottom: 0;
-     }
-   }
-   .logo{
-     justify-content: center;
-     .logoHortec>g>g>use{
-       fill: white;
-     }
-   }
-   .segundoSector{
-    font-family: 'Montserrat';
-    font-size: 1.2em;
-    color:white;
-    justify-content: flex-end;
-    >div>p{
-      margin-bottom: 0;
-    }
+height: 10vh;
+background-color: $background-s;
+.row-Footer{
+ -webkit-box-align: center;
+     -ms-flex-align: center;
+         align-items: center;
+ height: 100%;
+ .primerSector{
+   font-family: 'Montserrat';
+   font-size: 1.2em;
+   color:white;
+   -ms-grid-column-align: center;
+       justify-self: center;
+   >div>p{
+     margin-bottom: 0;
    }
  }
+ .logo{
+   -webkit-box-pack: center;
+       -ms-flex-pack: center;
+           justify-content: center;
+   .logoHortec>g>g>use{
+     fill: white;
+   }
+ }
+ .segundoSector{
+  font-family: 'Montserrat';
+  font-size: 1.2em;
+  color:white;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  >div>p{
+    margin-bottom: 0;
+  }
+ }
+}
 }
 
 @include mediaSm{
-  #Footer{
-    height: 20vh;
-    .row-Footer{
-      .primerSector{
-        order: 2;
-        justify-content: center;
-      };
-      .logo{
-        order: 1;
-      };
-      .segundoSector{
-        order: 3;
-        justify-content: center;
-      }
+#Footer{
+  height: 20vh;
+  .row-Footer{
+    .primerSector{
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    };
+    .logo{
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1;
+    };
+    .segundoSector{
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
     }
   }
+}
 }

@@ -1,8 +1,18 @@
- .BodyCoop {
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+.BodyCoop {
     background-color: $background-p;
     .contenido1{
-        align-items: center;
-        box-shadow: 3px 10px 14px -7px rgba(84,84,84,1);
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-shadow: 3px 10px 14px -7px rgba(84,84,84,1);
+                box-shadow: 3px 10px 14px -7px rgba(84,84,84,1);
             .texto1{
                 margin-left: 25px;
                 margin-bottom: 40px;
@@ -21,7 +31,8 @@
                     }
     }
     .contenedorCarousel{
-        box-shadow: 10px 7px 20px -3px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 10px 7px 20px -3px rgba(0,0,0,0.75);
+                box-shadow: 10px 7px 20px -3px rgba(0,0,0,0.75);
 
         .carousel-caption h3{
             font-family: 'Varela Round';
@@ -29,11 +40,15 @@
     }
     }
     .contenido2{
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         .colCont2{
             margin-top: 5vh;
             margin-bottom: 5vh;
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             .iconosCoop {
                 width: 70%;
             }
@@ -55,10 +70,17 @@
         }
     }
     .contenido3 {
-        justify-content: space-around;
-        box-shadow: -2px -1px 8px 0px #545454;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+        -webkit-box-shadow: -2px -1px 8px 0px #545454;
+                box-shadow: -2px -1px 8px 0px #545454;
         .actualitat {
-            flex-flow: column wrap ;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: column wrap ;
+                    flex-flow: column wrap ;
+            -webkit-transition: 0.5s ease-out;
+            -o-transition: 0.5s ease-out;
             transition: 0.5s ease-out;
             padding-top: 30px;
             padding-bottom: 30px;
@@ -73,11 +95,15 @@
                 text-decoration-color: #ff9800;
                 padding-bottom: 10px;
                 text-decoration-thickness:2px ;
+                -webkit-transition: 0.3s ease-in;
+                -o-transition: 0.3s ease-in;
                 transition: 0.3s ease-in;
             }
             p{
                 color: #424242;
                 font-family: 'Montserrat';
+                -webkit-transition: 0.3s ease-in;
+                -o-transition: 0.3s ease-in;
                 transition: 0.3s ease-in;
             }
         }
@@ -94,8 +120,13 @@
         .productoresMapa{
             background-color: $texto-s;
             z-index: -5;
-            flex-flow: column;
-            justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: column;
+                    flex-flow: column;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
 
             h3{
                 font-family: 'Montserrat';
@@ -112,9 +143,13 @@
                 margin-right: 20px;
             }
             .contadores {
-                justify-content: space-around;
+                -ms-flex-pack: distribute;
+                    justify-content: space-around;
                 .contador{
-                    flex-flow: column wrap; 
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: column wrap;
+                            flex-flow: column wrap; 
                     text-align: center;
                     h4{
                         font-family: 'Varela Round';
@@ -160,7 +195,10 @@
         }
     }
     .contenido2{
-        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
         .colCont3{
              .textoEnf {
             font-size: 1.3em!important;
@@ -186,7 +224,10 @@
         .anchoTotal{
             height:50%!important;
             .productoresMapa .contadores{
-                flex-flow: column wrap!important;
+                -webkit-box-orient: vertical!important;
+                -webkit-box-direction: normal!important;
+                    -ms-flex-flow: column wrap!important;
+                        flex-flow: column wrap!important;
                 .contador{
                     margin:15px;
                 }
@@ -198,4 +239,3 @@
 
 
 }
-
