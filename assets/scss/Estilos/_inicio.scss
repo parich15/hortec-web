@@ -589,8 +589,7 @@
 //INICIO 
 @include mediaSm {
     .Inicio{
-        flex: 1 1;
-        -webkit-box-flex: 1 1 100%;
+        overflow: hidden;
     }
     .container-cabecera{
         .tituloInicio{
