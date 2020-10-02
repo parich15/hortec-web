@@ -36,6 +36,7 @@
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
+                flex-wrap: wrap;
     }
     .presentacion {
         display: -webkit-box;
@@ -45,6 +46,7 @@
         -webkit-box-direction: normal;
             -ms-flex-flow: column wrap;
                 flex-flow: column wrap;
+                flex-wrap: wrap;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
@@ -71,6 +73,7 @@
         }
     }
     .presentacion2 {
+        flex-wrap: wrap;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -594,7 +597,12 @@
     .presentacion{
         text-align: center;
     }
-
+    .MainPresentacion .fila1{
+        -webkit-box-orient: vertical; 
+           -webkit-box-direction: normal;
+               -ms-flex-direction: column;  
+                 flex-direction: column;
+    }
     .MainPresentacion .presentacion2 .txtPre {
         font-size: 1.5em!important;
         margin-right: 0;
@@ -715,6 +723,7 @@
         -webkit-box-direction: reverse!important;
             -ms-flex-direction: column-reverse!important;
                 flex-direction: column-reverse!important;
+                flex-wrap: wrap;
         .mosaico {
             width: 320px;
             height: auto;
@@ -745,6 +754,7 @@
         -webkit-box-direction: normal;
             -ms-flex-flow: column wrap;
                 flex-flow: column wrap;
+                flex-wrap: wrap;
         .infoLoc{
             margin-bottom: 50px;
             .container-localizacion {
