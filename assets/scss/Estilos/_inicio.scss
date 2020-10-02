@@ -721,20 +721,30 @@
                         flex-wrap: wrap;
         }
     }
-
+    }
     .rowEmpresas {
         margin-top: 0px;
         .contEmpresa{
             margin-bottom: 2em;
         }
         .container-logo-empresa{
-            flex-flow: column wrap;
-            align-items: center;
+            overflow-y: hidden;
+            overflow-x: scroll;
+            white-space: nowrap;
             .logoEmpresa{
-                margin: 2em 0;
+                display: inline block;
+                &:first-child{
+                    padding-left: 13em;
+                    >a>img{
+                        height: 45px;
+                    }
+                }
+                &:last-child{
+                    margin-left: 1em;
+                   padding-right: 1em;
+                }
             }
         }
-    }
     }
     .contacto{
         -webkit-box-orient: vertical!important;
