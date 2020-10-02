@@ -156,6 +156,10 @@ position: relative;
   &.contacteImg{
     background: url(/img/hcontacte.jpg);
   }
+  &.blogImg{
+    background: url(/img/hblog.jpg);
+    background-position: bottom;
+  }
 }
 .contenido-cab {
   width: 100%;

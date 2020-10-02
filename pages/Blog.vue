@@ -1,7 +1,7 @@
 <template>
   <div class="BlogHome">
     <b-container class="cabecera-peque clear-filter" filter-color="black" fluid>
-      <div class="imagenCabeceraPeque contacteImg" />
+      <div class="imagenCabeceraPeque blogImg" />
       <b-row class="contenido-cab d-flex">
         <b-col class="col-md-12 tit-cop ">
           <h1 class="text-focus-in">

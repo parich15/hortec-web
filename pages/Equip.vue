@@ -32,7 +32,7 @@
       </b-row>
       <b-row class="comerciales mt-2 mt-md-5">
         <b-col class="col-12 col-md-7 txtComerciales">
-          <div class="text d-flex flex-column justify-content-center" data-aos="fade-right">
+          <div class="text d-flex flex-column justify-content-center my-3" data-aos="fade-right">
             <h3>
               Equip <span>Comercial</span>
             </h3>
@@ -75,7 +75,7 @@
     <b-container class="seccion2" fluid>
       <b-row class="almacen mt-2 mt-md-5">
         <b-col class="col-12 col-md-7 txtAlmacen">
-          <div class="text d-flex flex-column justify-content-center" data-aos="fade-right">
+          <div class="text d-flex flex-column justify-content-center my-3" data-aos="fade-right">
             <h3>
               Equip <span>Magatzem</span>
             </h3>
@@ -150,7 +150,7 @@
     <b-container class="seccion3" fluid>
       <b-row class="Transport mt-2 mt-md-5">
         <b-col class="col-12 col-md-7 txtTransport">
-          <div class="text d-flex flex-column justify-content-center" data-aos="fade-right">
+          <div class="text d-flex flex-column justify-content-center my-3" data-aos="fade-right">
             <h3>
               Equip <span>Transports</span>
             </h3>
@@ -225,7 +225,7 @@
     <b-container class="seccion4" fluid>
       <b-row class="Administracio mt-2 mt-md-5">
         <b-col class="col-12 col-md-7 txtAdmin">
-          <div class="text d-flex flex-column justify-content-center" data-aos="fade-right">
+          <div class="text d-flex flex-column justify-content-center my-3" data-aos="fade-right">
             <h3>
               Equip <span>Administratiu</span>
             </h3>

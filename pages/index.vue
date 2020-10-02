@@ -103,7 +103,7 @@
           <div data-aos="fade-right">
             <div class="d-flex contEmpresa m-3">
               <div class="cabeceraEmpresa">
-                <h4>Productors que confien en nosaltres</h4>
+                <h4>Clients que confien en nosaltres</h4>
                 <h6>Avançant i creixent junts</h6>
               </div>
               <div class="bodyEmpresas">
@@ -117,22 +117,24 @@
         </b-col>
         <b-col class="col-md-7 d-flex container-logo-empresa">
           <div class="logoEmpresa">
-            <b-img src="img/cooperativa.jpg" rounded width="50" height="50" />
+            <a target="_blank" href="https://molsa.bio/">
+              <b-img src="img/Logos/molsa.png" rounded width="auto" height="80" />
+            </a>
           </div>
           <div class="logoEmpresa">
-            <b-img src="img/cooperativa.jpg" rounded width="50" height="50" />
+            <a target="_blank" href="https://www.ecocentro.es/">
+              <b-img src="img/Logos/ecocentro.png" rounded width="auto" height="80" />
+            </a>
           </div>
           <div class="logoEmpresa">
-            <b-img src="img/cooperativa.jpg" rounded width="50" height="50" />
+            <a target="_blank" href="https://www.lortiga.cat/">
+              <b-img src="img/Logos/ortiga.png" rounded width="auto" height="80" />
+            </a>
           </div>
           <div class="logoEmpresa">
-            <b-img src="img/cooperativa.jpg" rounded width="50" height="50" />
-          </div>
-          <div class="logoEmpresa">
-            <b-img src="img/cooperativa.jpg" rounded width="50" height="50" />
-          </div>
-          <div class="logoEmpresa">
-            <b-img src="img/cooperativa.jpg" rounded width="50" height="50" />
+            <a target="_blank" href="https://www.espacioorganico.com/">
+              <b-img src="img/Logos/espacio.jpg" rounded width="auto" height="80" />
+            </a>
           </div>
         </b-col>
       </b-row>
