@@ -588,6 +588,10 @@
 
 //INICIO 
 @include mediaSm {
+    .Inicio{
+        flex: 1 1;
+        -webkit-box-flex: 1 1 100%;
+    }
     .container-cabecera{
         .tituloInicio{
             font-size: 4em;
