@@ -73,6 +73,26 @@
             }
         }
     }
+    .idiomas {
+        .selector{
+            width: 2em;
+            flex-flow: column wrap;
+            .esp,.cat {
+                display: flex;
+                justify-content: center;
+                img{
+                    width: 100%;
+                    height: 1em;
+                }
+            }
+            .esp{
+                margin-bottom: 5px;
+            }
+            .cat{
+                margin-top: 5px;
+            }
+        }
+    }
 }
 .popover {
 
@@ -171,6 +191,21 @@
                 -webkit-transform: scale(1.1);
                     -ms-transform: scale(1.1);
                         transform: scale(1.1);
+            }
+        }
+        .idiomas{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .selector{
+                width: 80%;
+                flex-flow: row wrap;
+                justify-content: space-around;
+                margin-top: 2em;
+                .esp,.cat{
+                    margin: 0
+                }
             }
         }
         @-webkit-keyframes appear {

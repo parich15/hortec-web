@@ -17,13 +17,14 @@ export default {
   name: 'IconosFam',
   data () {
     return {
+
       items: [
-        { icono: './img/fam/i1.png', titulo: 'Productes Naturals', texto: 'Els nostres productes arriben del camp a la teva botiga, sempre garantint la màxima cualitat.' },
-        { icono: './img/fam/i2.png', titulo: 'Collita Responsable', texto: 'Durant tot l´any servim gran varietat de productes sempre respectant les époques de collita.' },
-        { icono: './img/fam/i3.png', titulo: 'Etiqueta CCPAE', texto: 'Tots els nostres productes venen amb el segell CCPAE que asegura l´origen ecològic' },
-        { icono: './img/fam/i4.png', titulo: 'Gran Varietat', texto: 'A part de la gran selecció de fruites i verdures oferim un ampli catàleg de productes d´altres families' },
-        { icono: './img/fam/i5.png', titulo: 'Rotació Setmanal', texto: 'Setmanalment innovem i portem nous productes de totes les families.' },
-        { icono: './img/fam/i6.png', titulo: 'Fem Cooperativa', texto: 'A Hortec volem seguir creixent i fer que altres creixin amb nosaltres com una gran familia.' }
+        { icono: '/img/fam/i1.png', titulo: this.$i18n.t('Fam.ico1'), texto: this.$i18n.t('Fam.desc1') },
+        { icono: '/img/fam/i2.png', titulo: this.$i18n.t('Fam.ico2'), texto: this.$i18n.t('Fam.desc2') },
+        { icono: '/img/fam/i3.png', titulo: this.$i18n.t('Fam.ico3'), texto: this.$i18n.t('Fam.desc3') },
+        { icono: '/img/fam/i4.png', titulo: this.$i18n.t('Fam.ico4'), texto: this.$i18n.t('Fam.desc4') },
+        { icono: '/img/fam/i5.png', titulo: this.$i18n.t('Fam.ico5'), texto: this.$i18n.t('Fam.desc5') },
+        { icono: '/img/fam/i6.png', titulo: this.$i18n.t('Fam.ico6'), texto: this.$i18n.t('Fam.desc6') }
       ]
     }
   }

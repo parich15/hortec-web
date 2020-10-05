@@ -1,6 +1,6 @@
 <template>
   <b-navbar toggleable="lg" type="light" fixed="top" class="MenuNav" :class="{'solid':!transNavbar}">
-    <b-navbar-brand tag="h1" class="mb-0 titulo" to="/">
+    <b-navbar-brand tag="h1" class="mb-0 titulo" :to="localePath('/')">
       <logoHortec />
     </b-navbar-brand>
     <b-navbar-toggle target="nav-collapse">
@@ -13,29 +13,29 @@
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
         <b-navbar-nav class="my-auto linksMenu">
-          <b-nav-item to="/Cooperativa">
+          <b-nav-item :to="localePath('/Cooperativa')">
             Cooperativa
           </b-nav-item>
-          <b-nav-item to="/Families">
-            Families
+          <b-nav-item :to="localePath('/Families')">
+            {{ $t('Navbar.link2') }}
           </b-nav-item>
-          <b-nav-item to="/Adv">
+          <b-nav-item :to="localePath('/Adv')">
             ADV
           </b-nav-item>
-          <b-nav-item to="/Equip">
-            Equip
+          <b-nav-item :to="localePath('/Equip')">
+            {{ $t('Navbar.link4') }}
           </b-nav-item>
-          <b-nav-item to="/Blog">
+          <b-nav-item :to="localePath('/Blog')">
             Blog
           </b-nav-item>
-          <b-nav-item to="/Contacte">
-            Contacte
+          <b-nav-item :to="localePath('/Contacte')">
+            {{ $t('Navbar.link6') }}
           </b-nav-item>
         </b-navbar-nav>
         <b-navbar-nav class="my-auto botonCta">
           <b-nav-item>
             <b-button id="popoverBotiga" class="botiga" @click="modalTienda = !modalTienda">
-              Accés Botiga
+              {{ $t('Navbar.botiga') }}
             </b-button>
             <b-modal v-model="modalTienda" centered title="Accés Botiga Web">
               <b-container fluid>
@@ -46,11 +46,11 @@
                         <logoHortec />
                       </div>
                       <div class="txtModal">
-                        <h3>Atenció als usuaris</h3>
+                        <h3>{{ $t('Modal.tit') }}</h3>
                         <p>
-                          La botiga només es per clients ja registrats.
+                          {{ $t('Modal.txt') }}
                           <br>
-                          Només servim a profesionals.
+                          {{ $t('Modal.txt2') }}
                         </p>
                       </div>
                     </div>
@@ -59,14 +59,29 @@
               </b-container>
               <template v-slot:modal-footer="{ cancel }">
                 <b-button variant="warning" class="btnBotiga" @click="botiga()">
-                  Botiga
+                  {{ $t('Modal.btn1') }}
                 </b-button>
                 <b-button variant="danger" class="btnCancelModal" @click="cancel()">
-                  Sortir
+                  {{ $t('Modal.btn2') }}
                 </b-button>
               </template>
             </b-modal>
           </b-nav-item>
+        </b-navbar-nav>
+
+        <b-navbar-nav class="my-auto idiomas">
+          <div class="d-flex selector">
+            <div class="esp">
+              <nuxt-link :to="switchLocalePath('esp')">
+                <img src="../static/spain.png" alt="">
+              </nuxt-link>
+            </div>
+            <div class="cat">
+              <nuxt-link :to="switchLocalePath('cat')">
+                <img src="../static/catalonia.png" alt="">
+              </nuxt-link>
+            </div>
+          </div>
         </b-navbar-nav>
       </b-navbar-nav>
     </b-collapse>

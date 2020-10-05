@@ -5,7 +5,7 @@
       <b-row class="contenido-cab d-flex">
         <b-col class="col-md-12 tit-cop ">
           <h1 class="text-focus-in">
-            L'increible <span>Equip Hortec</span>
+            {{ $t('Equipo.titulo') }}<span>Hortec</span>
           </h1>
         </b-col>
       </b-row>
@@ -20,9 +20,7 @@
         <b-col class="col-12 col-md-6 txtEq">
           <div class="txtFilo" data-aos="fade-in">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto facere ratione exercitationem suscipit nostrum deserunt tempore itaque nesciunt iste minus quae error dolorum sequi, quidem voluptatum sunt accusantium alias! Aliquam.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia dignissimos consequatur assumenda necessitatibus, eum nulla aspernatur totam, officiis mollitia asperiores eveniet optio earum perferendis cumque dolorum blanditiis accusantium explicabo officia?
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus omnis accusantium neque assumenda nam officia mollitia, sapiente alias veritatis exercitationem voluptate atque asperiores qui consequatur itaque odio magni quis sunt.
+              {{ $t('Equipo.txtEquip') }}
             </p>
           </div>
         </b-col>
@@ -34,7 +32,7 @@
         <b-col class="col-12 col-md-7 txtComerciales">
           <div class="text d-flex flex-column justify-content-center my-3" data-aos="fade-right">
             <h3>
-              Equip <span>Comercial</span>
+              {{ $t('Equipo.titCom') }} <span>Comercial</span>
             </h3>
             <hr>
             <p>
@@ -77,7 +75,7 @@
         <b-col class="col-12 col-md-7 txtAlmacen">
           <div class="text d-flex flex-column justify-content-center my-3" data-aos="fade-right">
             <h3>
-              Equip <span>Magatzem</span>
+              {{ $t('Equipo.titMag') }} <span> {{ $t('Equipo.titMag2') }}</span>
             </h3>
             <hr>
             <p>
@@ -152,7 +150,7 @@
         <b-col class="col-12 col-md-7 txtTransport">
           <div class="text d-flex flex-column justify-content-center my-3" data-aos="fade-right">
             <h3>
-              Equip <span>Transports</span>
+              {{ $t('Equipo.titTrans') }} <span> {{ $t('Equipo.titTrans2') }}</span>
             </h3>
             <hr>
             <p>
@@ -227,7 +225,7 @@
         <b-col class="col-12 col-md-7 txtAdmin">
           <div class="text d-flex flex-column justify-content-center my-3" data-aos="fade-right">
             <h3>
-              Equip <span>Administratiu</span>
+              {{ $t('Equipo.titAdm') }} <span> {{ $t('Equipo.titAdm2') }}</span>
             </h3>
             <hr>
             <p>

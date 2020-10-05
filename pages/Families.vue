@@ -5,7 +5,7 @@
       <b-row class="contenido-cab d-flex">
         <b-col class="col-md-12 tit-cop ">
           <h1 class="text-focus-in">
-            Families de <span>Productes</span>
+            {{ $t('Fam.tit') }} <span>{{ $t('Fam.tit2') }}</span>
           </h1>
         </b-col>
       </b-row>
@@ -15,7 +15,7 @@
       <b-row class="fila-1 d-flex">
         <b-col class="col-12 col-md-6 d-flex columna-intro mt-5">
           <div class="introFam d-flex slide-in-blurred-bottom">
-            <h2>Productes <span class="dest">100% Ecològics</span></h2>
+            <h2>{{ $t('Fam.txtPres') }} <span class="dest">{{ $t('Fam.txtPres2') }}</span></h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam perspiciatis labore harum, officia tenetur excepturi temporibus velit pariatur doloribus quae natus minima. Ipsum qui vitae illo exercitationem sapiente. Nesciunt, quasi!</p>
           </div>
         </b-col>
@@ -28,13 +28,13 @@
         <b-col class="col-12 ctaFam d-flex">
           <div class="textoCta">
             <h4 class="titCta">
-              Vols saber més de les nostres families?
+              {{ $t('Fam.cta') }}
             </h4>
           </div>
           <div class="btnsCta d-flex">
             <div data-aos="fade-right" data-aos-delay="700">
-              <b-button type="button" size="lg" pill class="btn-informacio">
-                Més Informació
+              <b-button type="button" size="lg" pill class="btn-informacio" :to="localePath('/Contacte')">
+                {{ $t('Fam.btn1') }}
               </b-button>
             </div>
             <div data-aos="fade-left" data-aos-delay="700">
@@ -46,7 +46,7 @@
                 class="btn-botiga"
                 @click="botiga"
               >
-                Botiga
+                {{ $t('Fam.btn2') }}
               </b-button>
             </div>
           </div>
@@ -57,7 +57,7 @@
       <b-row class="align-items-center rowAmp">
         <b-col class="col-12 col-md-7 txtAmp columna1">
           <div class="container txtAmp" data-aos="zoom-in">
-            <h3>Lorem Ipusm</h3>
+            <h3>{{ $t('Fam.tit3') }}</h3>
             <hr>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius architecto quae animi!

@@ -5,7 +5,7 @@
       <b-row class="contenido-cab d-flex">
         <b-col class="col-md-12 tit-cop ">
           <h1 class="text-focus-in">
-            Posem'nos en <span>Contacte</span>
+            {{ $t('Contacto.tit') }} <span>{{ $t('Contacto.tit2') }}</span>
           </h1>
         </b-col>
       </b-row>
@@ -14,10 +14,9 @@
       <b-row class="my-5">
         <b-col class="col-12 col-md-7 d-flex">
           <div class="container mx-auto my-auto txtCont" data-aos="fade-up">
-            <h3><span>Contacte</span> amb nosaltres</h3>
+            <h3><span>{{ $t('Contacto.tit3') }}</span>{{ $t('Contacto.tit4') }}</h3>
             <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt pariatur qui laborum est aliquid earum tenetur saepe beatae. Aspernatur consequatur dignissimos fugit corporis iure soluta temporibus exercitationem impedit molestiae nobis.
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore est neque tenetur animi necessitatibus, at ea numquam magnam earum tempore eius commodi consequuntur porro, laboriosam odit a? Dicta, libero nulla.
+              {{ $t('Contacto.txtCon') }}
             </p>
           </div>
         </b-col>
@@ -31,7 +30,7 @@
         <b-col class="col-12 col-md-6">
           <div class="container py-5" data-aos="fade-in">
             <h3>
-              Formulari de <span>Contacte</span>
+              {{ $t('Contacto.form1') }} <span>{{ $t('Contacto.form2') }}</span>
             </h3>
 
             <div class="contForm py-3">

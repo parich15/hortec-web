@@ -3,7 +3,7 @@
     <b-row class="titTjt d-flex justify-content-center">
       <b-col class="col-12 col-md-6 tjtTit ">
         <div data-aos="fade-up">
-          <h2>Els valors d' Hortec</h2>
+          <h2>{{ $t('Inicio.valores') }}</h2>
         </div>
       </b-col>
     </b-row>

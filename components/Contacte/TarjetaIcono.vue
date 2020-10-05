@@ -20,17 +20,17 @@ export default {
       items: [
         {
           icono: 'telephone',
-          titulo: "Truca'ns al nostre telèfon:",
+          titulo: this.$i18n.t('Contacto.telf'),
           desc: '(+34) 606 90 33 10'
         },
         {
           icono: 'envelope',
-          titulo: 'Escriu-nos un correu:',
+          titulo: this.$i18n.t('Contacto.mail'),
           desc: 'info@hortec.org'
         },
         {
           icono: 'signpost-split',
-          titulo: 'Ens podràs trobar a:',
+          titulo: this.$i18n.t('Contacto.loc'),
           desc: 'Carrer Transversal 2, 53, 08040'
         }
       ]

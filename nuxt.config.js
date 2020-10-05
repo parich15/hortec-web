@@ -73,7 +73,26 @@ export default {
     'bootstrap-vue/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    ['nuxt-i18n',{
+      locales: [
+        {
+          name:'Català',
+          code: 'cat',
+          iso:'cat-CAT',
+          file: 'cat-CAT.js'
+        },
+        {
+          name:'Español',
+          code: 'esp',
+          iso: 'esp-ESP',
+          file: 'esp-ESP.js'
+        }
+      ],
+      langDir: 'lang/',
+      defaultLocale:'cat',
+      lazy: true
+    }]
   ],
   bootstrapVue: {
     icons: true
