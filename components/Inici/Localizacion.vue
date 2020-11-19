@@ -1,15 +1,13 @@
 <template>
   <b-row class="rowLocalizacion">
-    <b-col class="col-md-4 d-flex infoLoc">
+    <b-col class="col-12 col-md-4 d-flex infoLoc">
       <div data-aos="fade-up">
         <div class="container-localizacion d-flex">
-          <h3>¿On som?</h3>
-          <h6>Ens trobaràs a Mercabarna - Barcelona </h6>
+          <h3>{{ $t('Inicio.donde') }}</h3>
+          <h6>{{ $t('Inicio.subtDonde') }} </h6>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-            Officia sint nemo deserunt modi omnis, exercitationem magni sunt dignissimos quae,
-            ab provident quaerat quo expedita voluptatem ex assumenda ipsa. Accusamus, sed.<br>
-            <span>Pots arribar des de <a
+            {{ $t('Inicio.txtDonde') }}<br>
+            <span>{{ $t('Inicio.llegar') }} <a
               href="https://www.tmb.cat/es/barcelona/metro/-/lineametro/L9S"
               target="_blank"
             >
@@ -29,7 +27,7 @@
         </div>
       </div>
     </b-col>
-    <b-col class="col-md-4 col-xs-12 d-flex mapLoc">
+    <b-col class="col-12 col-md-4 d-flex mapLoc">
       <div class="container-mapa" data-aos="fade-up">
         <div class="mapa">
           <iframe

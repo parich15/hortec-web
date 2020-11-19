@@ -1,10 +1,22 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .families{
     .Families-1{
         .fila-1{
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             margin-bottom: 15vh;
             .columna-intro>.introFam{
-                flex-flow: column wrap;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-flow: column wrap;
+                        flex-flow: column wrap;
                 h2{
                     font-size: 3rem;
                     font-family: 'Montserrat';
@@ -25,19 +37,35 @@
             }
         }
         .fila-2{
-            justify-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
             .famProd{
-                justify-content: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
                 .wrapperProductos{
-                    flex-flow: row wrap;
-                    justify-content: space-between;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: row wrap;
+                            flex-flow: row wrap;
+                    -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                            justify-content: space-between;
                     .selectorFamilia{
-                        flex-flow: column wrap;
-                        align-items: center; 
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                            -ms-flex-flow: column wrap;
+                                flex-flow: column wrap;
+                        -webkit-box-align: center;
+                            -ms-flex-align: center;
+                                align-items: center; 
                         width: 30%;
                         margin-bottom: 70px;
                         .imgFam{
                             margin-bottom: 15px;
+                            -webkit-transition: 0.5s ease-in;
+                            -o-transition: 0.5s ease-in;
                             transition: 0.5s ease-in;
                             border-radius: 50%;
                         }
@@ -47,6 +75,8 @@
                                 font-family: 'Montserrat';
                                 color:$texto-pl;
                                 font-weight: 600;
+                                -webkit-transition: 0.2s ease-in;
+                                -o-transition: 0.2s ease-in;
                                 transition: 0.2s ease-in;
                             }
                             p{
@@ -58,15 +88,23 @@
                         }
                         &:hover{
                             .imgFam{
-                                transform: scale(1.1);
+                                -webkit-transform: scale(1.1);
+                                    -ms-transform: scale(1.1);
+                                        transform: scale(1.1);
+                                -webkit-transition: 0.3s ease-in;
+                                -o-transition: 0.3s ease-in;
                                 transition: 0.3s ease-in;
-                                box-shadow: 0px 0px 11px 2px #495057;
+                                -webkit-box-shadow: 0px 0px 11px 2px #495057;
+                                        box-shadow: 0px 0px 11px 2px #495057;
                             }
                             .txtFam{
                                 h3{
+                                    -webkit-transition: 0.2s ease-in;
+                                    -o-transition: 0.2s ease-in;
                                     transition: 0.2s ease-in;
                                 text-decoration: underline;
-                                text-decoration-color: $background-s;
+                                -webkit-text-decoration-color: $background-s;
+                                        text-decoration-color: $background-s;
                                 text-decoration-thickness: 2.8px;
                                 }
                                 
@@ -78,10 +116,14 @@
 
             .ctaFam{
                 height: 25vh;
-                justify-content: space-around;
+                -ms-flex-pack: distribute;
+                    justify-content: space-around;
                 background-color: $background-p;
-                align-items: center;
-                box-shadow: 0px 0px 4px 1px #d6d8db;
+                -webkit-box-align: center;
+                    -ms-flex-align: center;
+                        align-items: center;
+                -webkit-box-shadow: 0px 0px 4px 1px #d6d8db;
+                        box-shadow: 0px 0px 4px 1px #d6d8db;
                 .textoCta{
                     width: 65%;
                     text-align: center;
@@ -93,32 +135,46 @@
                  }
                 }
                 .btnsCta {
-                    flex-flow: row wrap;
-                    justify-content: space-evenly;
+                    -webkit-box-orient: horizontal;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: row wrap;
+                            flex-flow: row wrap;
+                    -webkit-box-pack: space-evenly;
+                        -ms-flex-pack: space-evenly;
+                            justify-content: space-evenly;
                     width: 35%;
                     overflow: hidden;
                     height: 100%;
-                    align-items: center;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
                     
                     .btn-informacio{
                         font-family: 'Montserrat';
                         background: $background-sl;
                         border-color: $background-sl;
+                        -webkit-transition: 0.3s ease-in;
+                        -o-transition: 0.3s ease-in;
                         transition: 0.3s ease-in;
                         font-size: 1.4em;
                         font-weight: 600;
                         outline: none;
                         &:hover{
-                            transform: scale(1.05);
+                            -webkit-transform: scale(1.05);
+                                -ms-transform: scale(1.05);
+                                    transform: scale(1.05);
                             background-color: $background-so;
                         }
                         &:focus{
-                            box-shadow: none!important;
+                            -webkit-box-shadow: none!important;
+                                    box-shadow: none!important;
                         }
                     }
                     .btn-botiga{
                         border-color: $background-sl;
                         color: $background-sl;
+                        -webkit-transition: 0.3s ease-in;
+                        -o-transition: 0.3s ease-in;
                         transition: 0.3s ease-in;
                         font-size: 1.4em;
                         font-weight: 600;
@@ -131,7 +187,8 @@
                             border-color: $background-sl;
                         }
                         &:focus{
-                            box-shadow: none!important;
+                            -webkit-box-shadow: none!important;
+                                    box-shadow: none!important;
                         }
                     }
                 }
@@ -141,7 +198,8 @@
     }
     .ampliacionFam{
         .rowAmp{
-            box-shadow: 0px 4px 3px #d6d8db;
+            -webkit-box-shadow: 0px 4px 3px #d6d8db;
+                    box-shadow: 0px 4px 3px #d6d8db;
         .columna1>.txtAmp{
             margin: 2em 0;
             h3{
@@ -152,6 +210,7 @@
             hr{
                 width: calc(30vw + 2vh + 1vmin);
                 border: 2px solid $texto-pl;
+                background-color: $texto-pl;
             }
         }
         .columna2>.imagenSkew{
@@ -166,7 +225,9 @@
                 background: white;
                 z-index: -1;
                 height: 102%;
-                transform: skew(-8deg) translateX(-40px);
+                -webkit-transform: skew(-8deg) translateX(-40px);
+                    -ms-transform: skew(-8deg) translateX(-40px);
+                        transform: skew(-8deg) translateX(-40px);
             }
             img{
                 z-index: -10;
@@ -175,19 +236,35 @@
     }
     .itemsFam{
         .colItems>.container{
-            flex-flow: row;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: row;
+                    flex-flow: row;
             max-width: 1300px;
             .componente{
                 width: 100%;
-                justify-content: space-between;
-                flex-flow: row wrap;
+                -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                        justify-content: space-between;
+                -webkit-box-orient: horizontal;
+                -webkit-box-direction: normal;
+                    -ms-flex-flow: row wrap;
+                        flex-flow: row wrap;
                 .item{
                 width: 33%;
+                display: -webkit-box;
+                display: -ms-flexbox;
                 display: flex;
-                flex-flow: column wrap;
-                align-content: center;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                    -ms-flex-flow: column wrap;
+                        flex-flow: column wrap;
+                -ms-flex-line-pack: center;
+                    align-content: center;
                 margin: 2.5em 0;
                 text-align: center;
+                -webkit-transition: all 0.5s ease-in;
+                -o-transition: all 0.5s ease-in;
                 transition: all 0.5s ease-in;
                 .icono{
                     margin-bottom: 0.5em;
@@ -198,6 +275,8 @@
                         font-family: 'Montserrat';
                         font-weight: 600;
                         color: $texto-pl;
+                        -webkit-transition: 0.5 ease-in;
+                        -o-transition: 0.5 ease-in;
                         transition: 0.5 ease-in;
                     }
                     p{
@@ -206,12 +285,18 @@
                     }
                     &:hover{
                         .icono{
-                            transform: scale(1.05);
+                            -webkit-transform: scale(1.05);
+                                -ms-transform: scale(1.05);
+                                    transform: scale(1.05);
+                            -webkit-transition: 500ms ease-in;
+                            -o-transition: 500ms ease-in;
                             transition: 500ms ease-in;
                         }
                         .textoItem{
                             h4{
                                 color: $background-s;
+                                -webkit-transition: 500ms ease-in;
+                                -o-transition: 500ms ease-in;
                                 transition: 500ms ease-in;
                             }
                         }
@@ -229,7 +314,10 @@
         .fila-2{
             .famProd{
                 .wrapperProductos{
-                    flex-flow: column wrap!important;
+                    -webkit-box-orient: vertical!important;
+                    -webkit-box-direction: normal!important;
+                        -ms-flex-flow: column wrap!important;
+                            flex-flow: column wrap!important;
                     .selectorFamilia{
                         width: 100%!important;
                     }
@@ -237,8 +325,13 @@
             }
             .ctaFam{
                 height: 55vh!important;
-                flex-flow: column wrap !important;
-                justify-content: space-evenly!important;
+                -webkit-box-orient: vertical !important;
+                -webkit-box-direction: normal !important;
+                    -ms-flex-flow: column wrap !important;
+                        flex-flow: column wrap !important;
+                -webkit-box-pack: space-evenly!important;
+                    -ms-flex-pack: space-evenly!important;
+                        justify-content: space-evenly!important;
                 padding: 20px 0;
                 .textoCta{
                     width: 100%!important;
@@ -249,10 +342,17 @@
                 }
                 .btnsCta{
                     width: 100%!important;
-                    flex-flow: column!important;
-                    align-items: center!important;
+                    -webkit-box-orient: vertical!important;
+                    -webkit-box-direction: normal!important;
+                        -ms-flex-flow: column!important;
+                            flex-flow: column!important;
+                    -webkit-box-align: center!important;
+                        -ms-flex-align: center!important;
+                            align-items: center!important;
                     height: 40%!important;
-                    justify-content: space-evenly!important;
+                    -webkit-box-pack: space-evenly!important;
+                        -ms-flex-pack: space-evenly!important;
+                            justify-content: space-evenly!important;
                 
                 }
            }
@@ -269,9 +369,16 @@
             }
             .itemsFam{
                 .colItems>.container>.componente{
-                    justify-content: center;
-                    flex-flow: column wrap;
-                    align-items: center;
+                    -webkit-box-pack: center;
+                        -ms-flex-pack: center;
+                            justify-content: center;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                        -ms-flex-flow: column wrap;
+                            flex-flow: column wrap;
+                    -webkit-box-align: center;
+                        -ms-flex-align: center;
+                            align-items: center;
                     .item{
                         width: 100%;
                     }
@@ -286,13 +393,17 @@
     .families{
         .ampliacionFam{
             .columna2>.imagenSkew{
-                justify-content: center;
+                -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                        justify-content: center;
                 &::before{
-                    transform: skew(-8deg) translateX(-35px);
+                    -webkit-transform: skew(-8deg) translateX(-35px);
+                        -ms-transform: skew(-8deg) translateX(-35px);
+                            transform: skew(-8deg) translateX(-35px);
                     width: 20%;
                 }
             }
            
         }
     }
-}
+}   

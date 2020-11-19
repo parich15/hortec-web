@@ -1,223 +1,259 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .Contacto{
-   .TarjetaIcono{
-       .BodyTjt{
-        transition: 250ms ease-in;
-        width: 75%;
-        //justify-content: space-evenly;
-        background: white;
-        box-shadow: 0px 0 4px 1px #00000078;
-        margin: 1.2em auto;
-        border-radius: 25px;
-        .icono{
-            align-self: center;
-        >svg{
-            width: 50px;
-            height: 35px;
-            fill: $texto-pl;
-            transition: 250ms ease-in
+    .TarjetaIcono{
+        .BodyTjt{
+         -webkit-transition: 250ms ease-in;
+         -o-transition: 250ms ease-in;
+         transition: 250ms ease-in;
+         width: 75%;
+         //justify-content: space-evenly;
+         background: white;
+         -webkit-box-shadow: 0px 0 4px 1px #00000078;
+                 box-shadow: 0px 0 4px 1px #00000078;
+         margin: 1.2em auto;
+         border-radius: 25px;
+         .icono{
+             -ms-flex-item-align: center;
+                 -ms-grid-row-align: center;
+                 align-self: center;
+         >svg{
+             width: 50px;
+             height: 35px;
+             fill: $texto-pl;
+             -webkit-transition: 250ms ease-in;
+             -o-transition: 250ms ease-in;
+             transition: 250ms ease-in
+         }
         }
-       }
-       .info{
-           justify-self: center;
-           h4{
-               font-family: 'Montserrat';
-               font-size: 1.2em;
-               color: $texto-p;
-           }
-           p{
-            font-family: 'Montserrat';
-            color: $texto-pl;
-            transition: 250ms ease-in
-           }
-        }
-        &:hover{
-            transform: scale(1.03);
-            transition: 250ms ease-in;
-            .icono>svg{
-                transform: scale(1.1);
-                transition: 250ms ease-in;
-                fill:$texto-s;
+        .info{
+            -ms-grid-column-align: center;
+                justify-self: center;
+            h4{
+                font-family: 'Montserrat';
+                font-size: 1.2em;
+                color: $texto-p;
             }
-            .info{
-                
-                p{
-                    color:$texto-s;
-                    transition: 250ms ease-in;
-                }
+            p{
+             font-family: 'Montserrat';
+             color: $texto-pl;
+             -webkit-transition: 250ms ease-in;
+             -o-transition: 250ms ease-in;
+             transition: 250ms ease-in
             }
-        }
-       }
-   }
-   .txtCont{
-       h3{
-           font-family: 'Montserrat';
-           font-weight: 600;
-           font-size: 2.5em;
-           color: $texto-p;
-           >span{
-               color:$texto-s;
-           }
-       }
-       p{
-           font-family: 'Montserrat';
-           font-size: 1.25em;
-           line-height: 1.6;
-           color:$texto-p;
-       }
-   }
-   .seccion2{
-       background-color: $background-p;
-       box-shadow: 0px 0px 3px 2px #00000070;
-       >div>div>.container {
-           h3{
-               font-family: 'Montserrat';
-               font-weight: 600;
-               font-size: calc(1.5vh + 1.4vw + 1vmin);
-               color:$texto-p;
-               span{
-                   color:$texto-s;
-                   
-               }
-           }
-
-           .contForm>.Formulario{
-               label{
-                   font-size: 1.1em;
-                   font-family: 'Montserrat';
-                   color: $texto-pl
-               }
-               .form-group{
-                   margin: 1.5em 0px;
-                   &:hover{
-                    label{
-                        color: $texto-s;
-                        transition: 250ms ease-in-out;
-                    }
-                   }
-                }
-                #preguntes.form-group:hover{
-                    label{
-                        color:$texto-p
-                    }
-                }
-                input{
-                    font-family: 'Montserrat';
-                    font-weight: 600;
-                    font-size: 1.3em;
-                    width: 80%;
-                    &:focus{
-                        color:$texto-s;
-                        border-color: #ff9800;
-                        outline: 0;
-                        box-shadow: 0 0 0 0.2rem rgba(225, 169, 61, 0.56);
-                    }
-                    &:valid{
-                        color:$texto-s
-                    }
-                    &:invalid{
-                        color: red;
-                    }
-                }
-                .input-invalid-message{
-                    color: red;
-                    font-family: 'Montserrat';
-                    font-weight: 600;
-                    font-size: 0.9em;
-                    padding-left: 5px;
-                }
-
-                small{
-                    color: $texto-s!important;
-                    font-size: 1em;
-                }
-                /*FLECHAS NUMERICAS*/
-                input::-webkit-outer-spin-button,
-
-                input::-webkit-inner-spin-button {
-                -webkit-appearance: none;
-                margin: 0;
-
-                }
-
-                /* Firefox */
-                input[type=number] {
-                -moz-appearance: textfield;
-
-                }
-                /*fin flechas*/
-                .custom-control-input:checked ~ .custom-control-label::before {
-                    color: #fff;
-                    border-color: #ff9800;
-                    background-color: #ff9800;
-                }
-                #radiobuttons{
-                    display: flex;
-                    justify-content: space-around;
-                    width: 80%;
-                }
-
-                .contBtn {
-                    width: 80%;
-                    .btn{
-                        font-family: 'Montserrat';
-                        font-weight: 600;
-                        width: 35%;
-                    }
-                    .btn-primary{
-                        background-color: $texto-s;
-                        border-color: $texto-s;
-                        &:focus{
-                            transition: 300ms ease-in;
-                            background-color: white;
-                            color: $texto-s
-                        }
-                    }
-                }
-           }
-       }
-       >div>div>.contenedorFoto{
-           //background-image: url('/img/Contacto/FotoContacto.jpg');
-           background-image: url('/img/Contacto/FotoContacto.jpg');
-            background-position-x: 50%;
-           height: 100%
-       }
-       >div>.colFoto{
-           padding:0;
-       }
-   }
-}
-
-@include mediaSm {
-    .Contacto{
-        .TarjetaIcono{
-            .BodyTjt{
-                width: 100%;
-            }
-        }
-        .seccion2 >div>div>.container{
-            h3{
-                font-size: calc(1.8vh + 1vw + 1.5vmin)
-            }
-
-            .contForm>.Formulario{
-                input{
-                    width: 100%;
-                }
-                #radiobuttons{
-                    width: 100%;
-                }
-                small{
-                    font-size: 0.8em;
-                    padding-left: 2px;
-                }
-                .contBtn{
-                    width: 100%;
-                }
-            }
-        }
-        .seccion2 >div>div>.contenedorFoto{
-            height: 300px!important;
-            background-size: cover;
+         }
+         &:hover{
+             -webkit-transform: scale(1.03);
+                 -ms-transform: scale(1.03);
+                     transform: scale(1.03);
+             -webkit-transition: 250ms ease-in;
+             -o-transition: 250ms ease-in;
+             transition: 250ms ease-in;
+             .icono>svg{
+                 -webkit-transform: scale(1.1);
+                     -ms-transform: scale(1.1);
+                         transform: scale(1.1);
+                 -webkit-transition: 250ms ease-in;
+                 -o-transition: 250ms ease-in;
+                 transition: 250ms ease-in;
+                 fill:$texto-s;
+             }
+             .info{
+                 
+                 p{
+                     color:$texto-s;
+                     -webkit-transition: 250ms ease-in;
+                     -o-transition: 250ms ease-in;
+                     transition: 250ms ease-in;
+                 }
+             }
+         }
         }
     }
-}
+    .txtCont{
+        h3{
+            font-family: 'Montserrat';
+            font-weight: 600;
+            font-size: 2.5em;
+            color: $texto-p;
+            >span{
+                color:$texto-s;
+            }
+        }
+        p{
+            font-family: 'Montserrat';
+            font-size: 1.25em;
+            line-height: 1.6;
+            color:$texto-p;
+        }
+    }
+    .seccion2{
+        background-color: $background-p;
+        -webkit-box-shadow: 0px 0px 3px 2px #00000070;
+                box-shadow: 0px 0px 3px 2px #00000070;
+        >div>div>.container {
+            h3{
+                font-family: 'Montserrat';
+                font-weight: 600;
+                font-size: calc(1.5vh + 1.4vw + 1vmin);
+                color:$texto-p;
+                span{
+                    color:$texto-s;
+                    
+                }
+            }
+ 
+            .contForm>.Formulario{
+                label{
+                    font-size: 1.1em;
+                    font-family: 'Montserrat';
+                    color: $texto-pl
+                }
+                .form-group{
+                    margin: 1.5em 0px;
+                    &:hover{
+                     label{
+                         color: $texto-s;
+                         -webkit-transition: 250ms ease-in-out;
+                         -o-transition: 250ms ease-in-out;
+                         transition: 250ms ease-in-out;
+                     }
+                    }
+                 }
+                 #preguntes.form-group:hover{
+                     label{
+                         color:$texto-p
+                     }
+                 }
+                 input{
+                     font-family: 'Montserrat';
+                     font-weight: 600;
+                     font-size: 1.3em;
+                     width: 80%;
+                     &:focus{
+                         color:$texto-s;
+                         border-color: #ff9800;
+                         outline: 0;
+                         -webkit-box-shadow: 0 0 0 0.2rem rgba(225, 169, 61, 0.56);
+                                 box-shadow: 0 0 0 0.2rem rgba(225, 169, 61, 0.56);
+                     }
+                     &:valid{
+                         color:$texto-s
+                     }
+                     &:invalid{
+                         color: red;
+                     }
+                 }
+                 .input-invalid-message{
+                     color: red;
+                     font-family: 'Montserrat';
+                     font-weight: 600;
+                     font-size: 0.9em;
+                     padding-left: 5px;
+                 }
+ 
+                 small{
+                     color: $texto-s!important;
+                     font-size: 1em;
+                 }
+                 /*FLECHAS NUMERICAS*/
+                 input::-webkit-outer-spin-button,
+ 
+                 input::-webkit-inner-spin-button {
+                 -webkit-appearance: none;
+                 margin: 0;
+ 
+                 }
+ 
+                 /* Firefox */
+                 input[type=number] {
+                 -moz-appearance: textfield;
+ 
+                 }
+                 /*fin flechas*/
+                 .custom-control-input:checked ~ .custom-control-label::before {
+                     color: #fff;
+                     border-color: #ff9800;
+                     background-color: #ff9800;
+                 }
+                 #radiobuttons{
+                     display: -webkit-box;
+                     display: -ms-flexbox;
+                     display: flex;
+                     -ms-flex-pack: distribute;
+                         justify-content: space-around;
+                     width: 80%;
+                 }
+ 
+                 .contBtn {
+                     width: 80%;
+                     .btn{
+                         font-family: 'Montserrat';
+                         font-weight: 600;
+                         width: 35%;
+                     }
+                     .btn-primary{
+                         background-color: $texto-s;
+                         border-color: $texto-s;
+                         &:focus{
+                             -webkit-transition: 300ms ease-in;
+                             -o-transition: 300ms ease-in;
+                             transition: 300ms ease-in;
+                             background-color: white;
+                             color: $texto-s
+                         }
+                     }
+                 }
+            }
+        }
+        >div>div>.contenedorFoto{
+            //background-image: url('/img/Contacto/FotoContacto.jpg');
+            background-image: url('/img/Contacto/FotoContacto.jpg');
+             background-position-x: 50%;
+            height: 100%
+        }
+        >div>.colFoto{
+            padding:0;
+        }
+    }
+ }
+ 
+ @include mediaSm {
+     .Contacto{
+         .TarjetaIcono{
+             .BodyTjt{
+                 width: 100%;
+             }
+         }
+         .seccion2 >div>div>.container{
+             h3{
+                 font-size: calc(1.8vh + 1vw + 1.5vmin)
+             }
+ 
+             .contForm>.Formulario{
+                 input{
+                     width: 100%;
+                 }
+                 #radiobuttons{
+                     width: 100%;
+                 }
+                 small{
+                     font-size: 0.8em;
+                     padding-left: 2px;
+                 }
+                 .contBtn{
+                     width: 100%;
+                 }
+             }
+         }
+         .seccion2 >div>div>.contenedorFoto{
+             height: 300px!important;
+             background-size: cover;
+         }
+     }
+ }

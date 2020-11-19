@@ -11,27 +11,25 @@
             HORTEC
           </h1>
           <h3 class="subtInicio tracking-in-expand">
-            Fruites i Verdures de Conreu Ecològic
+            {{ $t('Inicio.subtitulo') }}
           </h3>
         </div>
       </div>
     </div>
     <b-container class="MainPresentacion" fluid>
       <b-row class="fila1">
-        <b-col class="presentacion" data-aos="fade-up">
+        <b-col class="col-12 presentacion" data-aos="fade-up">
           <div>
-            <h2>Benvingut a <span>Hortec</span></h2>
-          </div>
-          <div>
-            <p>Som la primera cooperativa catalana compromesa amb <strong>l’agricultura ecològica</strong></p>
+            <h2>{{ $t('Inicio.presentacion') }}<span>Hortec</span></h2>
+
+            <p> {{ $t('Inicio.subPres') }}</p>
           </div>
         </b-col>
-        <b-col class="presentacion2" data-aos="fade-up">
+        <b-col class="col-12 presentacion2" data-aos="fade-up">
           <div class="txtPre">
             <p>
-              Treballem amb estima i dedicació perquè
-              l’alimentació amb producte de <strong>conreu ecològic</strong>
-              sigui una realitat per a tothom.
+              {{ $t('Inicio.cta1') }} <strong>{{ $t('Inicio.cta2') }}</strong>
+              {{ $t('Inicio.cta3') }}
             </p>
           </div>
         </b-col>
@@ -39,24 +37,18 @@
     </b-container>
     <b-container class="Principal" fluid>
       <b-row class="cooperativa">
-        <b-col class="col-md-6 txtCop" data-aos="fade-right">
+        <b-col class="col-12 col-md-6 txtCop" data-aos="fade-right">
           <h3>La Cooperativa</h3>
           <p class="mr-5">
-            HORTEC, Societat Cooperativa Catalana Limitada es va crear el 1991
-            entre varis pagesos que practicaven Agricultura Ecològica (AE) a
-            Catalunya, amb la finalitat de cobrir les necessitats de distribució
-            de les fruites i verdures procedents dels seus cultius, conreats sense
-            fer servir productes químics de síntesi, i d’acord amb les normatives
-            establertes en aquells moments pel Consejo Regulador de la Agricultura
-            Ecològica (CRAE), d’àmbit estatal.
+            {{ $t('Inicio.txtCop') }}
           </p>
           <div class="btnCop d-flex">
-            <b-button variant="outline-warning" to="/Cooperativa">
-              Més Informació
+            <b-button variant="outline-warning" :to="localePath('/Cooperativa')">
+              {{ $t('Inicio.txtBtn') }}
             </b-button>
           </div>
         </b-col>
-        <b-col class="col-md-6 imgCop" data-aos="fade-left">
+        <b-col class="col-12 col-md-6 imgCop" data-aos="fade-left">
           <div class="espacio" />
           <!--<b-img src="img/cooperativa.jpg" rounded width="300" height="300" />-->
         </b-col>
@@ -64,28 +56,23 @@
     </b-container>
     <b-container class="families" fluid>
       <b-row class="rowFamilies d-flex">
-        <b-col class="col-lg-6 colImg d-flex my-5">
+        <b-col class="col-12 col-lg-6 colImg d-flex my-5">
           <div data-aos="fade-up">
             <div class="contenedorImg my-3">
               <b-img src="img/families.jpg" width="500" height="500" />
             </div>
           </div>
         </b-col>
-        <b-col class="col-lg-6 colTxt d-flex">
+        <b-col class="col-12 col-lg-6 colTxt d-flex">
           <div data-aos="fade-up">
-            <h3>Famílies</h3>
-            <h6>Coneix els nostres productes</h6>
+            <h3> {{ $t('Inicio.titFam') }}</h3>
+            <h6> {{ $t('Inicio.subFam') }}</h6>
             <p>
-              La base de l’oferta d’HORTEC son la fruita i la verdura fresca. Amb el pas del temps i sovint a demanda
-              de la clientela, l’oferta s’ha anat ampliant amb ous, làctics, pasta i llegums, patés, oli, etc.
-              Els factors de mercat (poder oferir una oferta variada al llarg de l’any, satisfer la creixent
-              demanda de producte) i de producció de la cooperativa (limitada capacitat productiva dels socis,
-              baix ritme d’incorporació de nous socis) fan que s’hagi de recórrer a proveïdors externs per poder
-              mantenir les demandes dels nostres clients.
+              {{ $t('Inicio.txtFam') }}
             </p>
             <div class="d-flex btnFam">
-              <b-button variant="outline-warning" to="/Families">
-                Més Informació
+              <b-button variant="outline-warning" :to="localePath('/Families')">
+                {{ $t('Inicio.txtBtn') }}
               </b-button>
             </div>
           </div>
@@ -100,17 +87,16 @@
     </b-container>
     <b-container class="empresasHortec" fluid>
       <b-row class="rowEmpresas">
-        <b-col class="col-md-5">
+        <b-col class="col-12 col-md-5 my-5">
           <div data-aos="fade-right">
             <div class="d-flex contEmpresa m-3">
               <div class="cabeceraEmpresa">
-                <h4>Productors que confien en nosaltres</h4>
-                <h6>Avançant i creixent junts</h6>
+                <h4>{{ $t('Inicio.clients') }}</h4>
+                <h6>{{ $t('Inicio.subCli') }}</h6>
               </div>
               <div class="bodyEmpresas">
                 <p>
-                  En aquests moments, la cooperativa HORTEC està formada per 18 socis actius amb les seves famílies i/o treballadors.
-                  La majoria som empreses familiars agràries. Les terres que conreen estan distribuïdes per diverses comarques del territori català.
+                  {{ $t('Inicio.txtCli') }}
                 </p>
               </div>
             </div>
@@ -118,22 +104,24 @@
         </b-col>
         <b-col class="col-md-7 d-flex container-logo-empresa">
           <div class="logoEmpresa">
-            <b-img src="img/cooperativa.jpg" rounded width="50" height="50" />
+            <a target="_blank" href="https://molsa.bio/">
+              <b-img src="img/Logos/molsa.png" rounded width="auto" height="80" />
+            </a>
           </div>
           <div class="logoEmpresa">
-            <b-img src="img/cooperativa.jpg" rounded width="50" height="50" />
+            <a target="_blank" href="https://www.ecocentro.es/">
+              <b-img src="img/Logos/ecocentro.png" rounded width="auto" height="80" />
+            </a>
           </div>
           <div class="logoEmpresa">
-            <b-img src="img/cooperativa.jpg" rounded width="50" height="50" />
+            <a target="_blank" href="https://www.lortiga.cat/">
+              <b-img src="img/Logos/ortiga.png" rounded width="auto" height="80" />
+            </a>
           </div>
           <div class="logoEmpresa">
-            <b-img src="img/cooperativa.jpg" rounded width="50" height="50" />
-          </div>
-          <div class="logoEmpresa">
-            <b-img src="img/cooperativa.jpg" rounded width="50" height="50" />
-          </div>
-          <div class="logoEmpresa">
-            <b-img src="img/cooperativa.jpg" rounded width="50" height="50" />
+            <a target="_blank" href="https://www.espacioorganico.com/">
+              <b-img src="img/Logos/espacio.jpg" rounded width="auto" height="80" />
+            </a>
           </div>
         </b-col>
       </b-row>
@@ -147,11 +135,11 @@
         </b-col>
         <b-col class="col-md-6 col-con-txt">
           <div class="txtContacto" data-aos="fade-up">
-            <h3>¿Vols que parlem?</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto tenetur porro unde suscipit dolor nihil quis. Maxime, architecto sint quas illo corrupti aliquam quisquam, error enim, neque dolorum totam porro. architecto sint quas illo corrupti aliquam quisquam, error enim, neque dolorum totam porro</p>
+            <h3>{{ $t('Inicio.contacte1') }}</h3>
+            <p>{{ $t('Inicio.txtCon') }}</p>
             <div class="botones-contacto d-flex">
-              <b-button variant="outline-warning" to="/Contacte">
-                Sol·licitar informació
+              <b-button variant="outline-warning" :to="localePath('/Contacte')">
+                {{ $t('Inicio.btnCon') }}
               </b-button>
             </div>
           </div>
