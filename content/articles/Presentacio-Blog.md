@@ -33,4 +33,4 @@ Esperem veure-us aviat per aquestes plataformes i no oblideu donar-nos un feedba
 
 La pàgina web ha estat desenvolupat per un treballador d'Hortec junt amb l'equip directiu per oferir la millor experiencia unida amb el sentiment i l'identitat d'Hortec.
 
-Web Design: [Oscar Paricio (Paric.Io)](https://paric.io)
+Més informació molt aviat. 
